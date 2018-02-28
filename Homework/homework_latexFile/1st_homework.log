@@ -1,0 +1,51 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdftex 2016.5.22)  14 FEB 2018 14:21
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**1st_homework.tex
+(./1st_homework.tex
+Missing character: There is no ï in font cmr10!
+Missing character: There is no » in font cmr10!
+Missing character: There is no ¿ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no   in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Â in font cmr10!
+Missing character: There is no   in font cmr10!
+
+./1st_homework.tex:11: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.11 ... chemsep) que vous nommerez  ainsiÂ : CIP_
+                                                  devoir1.zip
+? 
+./1st_homework.tex:11: Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.11 ... chemsep) que vous nommerez  ainsiÂ : CIP_
+                                                  devoir1.zip
+End of file on the terminal!
+
+./1st_homework.tex:11:  ==> Fatal error occurred, no output PDF file produced!

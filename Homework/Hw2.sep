@@ -1,0 +1,971 @@
+[ChemSep]
+Version=7.15
+Compiled=2016-11-23 18:52 2edb243ac45f
+Name=C:\Users\Molly-pc\Desktop\Hw2.sep
+Title=hw2
+User=Molly-pc
+Date=2018-02-05
+Time=03:03:04
+
+[Paths]
+Device drivers path=c:\program files\chemsepl7v15\bin\
+Help and Info path=c:\program files\chemsepl7v15\help\
+Component data path=c:\program files\chemsepl7v15\pcd\
+Property data path=c:\program files\chemsepl7v15\ipd\
+Section data path=c:\program files\chemsepl7v15\ild\
+Executables path=c:\program files\chemsepl7v15\bin\
+Temporary path=C:\Users\Molly-pc\AppData\Local\Temp\
+Scripts path=c:\program files\chemsepl7v15\bin\
+
+[Units]
+Temperature=K
+Flow=kmol/s
+Mass flow=kg/s
+Vapour volumetric flow=m3/s
+Liquid volumetric flow=m3/s
+Pressure=atm
+Heat=J/s
+Enthalpy=J/kmol
+Entropy=J/kmol/K
+Fraction=_
+Length=m
+1/Length=1/m
+Area=m2
+Volume=m3
+Moles=kmol
+Mass=kg
+Angle=rad
+Velocity=m/s
+Surface tension=N/m
+Density=kg/m3
+Molar density=kmol/m3
+Viscosity=N/m2.s
+Molecular weight=kg/kmol
+Heat capacity=J/kmol/K
+Thermal conductivity=J/s/m/K
+Diffusivity=m2/s
+Interaction parameter=J/mol
+Time=s
+
+[Components]
+4 Number of Components
+135 11 Library Offset, Index DT=2016-11-01,19:24:04 CHK=385355221 CAS=110-54-3 CID=n-h
+Name=N-hexane
+Lib=c:\program files\chemsepl7v15\pcd\chemsep1.pcd
+52 1102 Library Offset, Index DT=2016-11-01,19:24:04 CHK=148645508 CAS=64-17-5 CID=ethanol
+Name=Ethanol
+Lib=c:\program files\chemsepl7v15\pcd\chemsep1.pcd
+131 105 Library Offset, Index DT=2016-11-01,19:24:04 CHK=325814267 CAS=96-37-7 CID=Methylcy
+Name=Methylcyclopentane
+Lib=c:\program files\chemsepl7v15\pcd\chemsep1.pcd
+125 501 Library Offset, Index DT=2016-11-01,19:24:04 CHK=53432397 CAS=71-43-2 CID=benze
+Name=Benzene
+Lib=c:\program files\chemsepl7v15\pcd\chemsep1.pcd
+
+[Operation]
+1 Operation Flash
+*  Operation kind *
+*  Condenser *
+*  Reboiler *
+1 Stages
+1 Feed stages
+0 Sidestream stages
+F=1
+S=
+0 Pumparound stages
+P=
+
+[Simulation Model]
+*  Simulation model *
+
+[Properties]
+350 BIP estimation temperature
+
+[Thermodynamics]
+3 K model Gamma-Phi
+8 * Activity coefficient UNIFAC
+*  Wilson model *
+*  UNIQUAC model *
+1 Equation of State Ideal gas law
+*  Cubic EOS *
+*  Virial EOS *
+1 Vapour pressure Antoine
+0 Henry's law
+*  Henry's default *
+
+[Enthalpy]
+2 Enthalpy Ideal
+1 Enthalpy reference state Vapour
+298.15 Enthalpy reference temperature
+1 Formation enthalpies Excluded
+298.15 Exergy surroundings temperature
+
+[Physical property models]
+0 No Check T range
+*  Cubic EOS *
+*  Virial EOS *
+*  Vapour model *
+*  Liquid mixture density *
+*  Liquid component density *
+*  Vapour mixture viscosity *
+*  Vapour mixture viscosity pressure correction *
+*  Vapour component viscosity *
+*  Liquid mixture viscosity *
+*  Liquid component viscosity *
+* Vapour mixture Cp
+1 Vapour component Cp T correlation
+1 Liquid mixture Cp Mole fraction average of pure compound values
+* Liquid component Cp
+*  Vapour mixture conductivity *
+*  Vapour component conductivity *
+*  Liquid mixture conductivity *
+*  Liquid component conductivity *
+*  Mixture surface tension *
+*  Component surface tension *
+*  Vignes MS D-model *
+*  D mixture model *
+*  Vapour Diffusion Coefficients *
+11 Default Liquid Diffusion Coefficients Modified Wilke-Chang
+*  Interfacial tension *
+
+[Reaction data]
+0 Number of reactions
+
+[Specifications]
+Top
+Bottom
+
+[Feeds]
+1 Number
+1 Feed state T & p
+1 Stage Feed1{split-below}
+334.15 Temperature
+101325 Pressure
+0 Vapour fraction
+4 componentflows
+0.25 Component 1 flow
+0.4 Component 2 flow
+0.2 Component 3 flow
+0.15 Component 4 flow
+
+[Flash]
+1 Flash type Pressure & temperature
+101325 Pressure
+334.15 Temperature
+0.8 Vapour flow
+* Liquid flow
+* Heat duty Qcolumn
+
+[Solve options]
+1 Initialization Automatic
+1 Method Newton's method
+0.5 Flow Step limit
+10 Temperature Step limit
+1 Composition Step limit
+1 Flux Step limit
+0.000001 Accuracy
+100 Maximum iterations
+1 Iteration count & function vector
+0 T/V/L profiles
+0 X/Y profiles
+0 Variable and function vectors
+0 Jacobian
+1 History Screen
+History file=
+1 Feeds type Stage below
+0 Interactive
+0 Log thermodynamics
+0 Log enthalpy/entropy
+0 Log physical properties
+0 Log timing
+0 CO numeric differencing
+* Log from iteration
+0 CS K-value
+0 CS enthalpy
+0 CS entropy
+0 CS flash
+0 CS activity coefficient
+0 CS vapor pressuure
+0 CS density
+0 CS viscosity
+0 CS thermal conductivity
+0 CS heat capacity
+0 CS surface tension
+0 CS diffusivity
+0 Trace treshold
+
+[Programs]
+Temporary file=SCRATCH.TMP
+User program=
+1 Compiler Gfortran
+1 Show windows Hidden
+
+[FlowSheet]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   x="0.0"
+   y="0.0"
+   width="1.0"
+   height="1.0">
+<penwidth>1</penwidth>
+<move2 x=0 y=0 />
+<rect x1=0 y1=0 x2=1 y2=1 />
+<move2 x=0.35 y=0.3 />
+<line2 x=0.35 y=0.7 />
+<penstyle>Dot</penstyle>
+<move2 x=0.35 y=0.7 />
+<line2 x=0.55 y=0.7 />
+<penstyle>Solid</penstyle>
+<move2 x=0.55 y=0.7 />
+<line2 x=0.55 y=0.3 />
+<penstyle>Dot</penstyle>
+<move2 x=0.55 y=0.3 />
+<line2 x=0.35 y=0.3 />
+<penstyle>Solid</penstyle>
+<string x=0.44529 y=0.710204 s="1" />
+<arc x1=0.35 y1=0.75 x2=0.55 y2=0.65 x3=0.55 y3=0.7 x4=0.35 y4=0.7 />
+<string x=0.44529 y=0.310204 s="1" />
+<arc x1=0.35 y1=0.35 x2=0.55 y2=0.25 x3=0.35 y3=0.3 x4=0.55 y4=0.3 />
+<move2 x=0.45 y=0.75 />
+<line2 x=0.45 y=0.825 />
+<move2 x=0.45 y=0.825 />
+<line2 x=0.9 y=0.825 />
+<line2 x=0.88 y=0.835 />
+<line2 x=0.88 y=0.815 />
+<line2 x=0.9 y=0.825 />
+<string x=0.870173 y=0.865408 s="Top" />
+<move2 x=0.45 y=0.25 />
+<line2 x=0.45 y=0.175 />
+<move2 x=0.45 y=0.175 />
+<line2 x=0.9 y=0.175 />
+<line2 x=0.88 y=0.185 />
+<line2 x=0.88 y=0.165 />
+<line2 x=0.9 y=0.175 />
+<string x=0.848195 y=0.215408 s="Bottom" />
+<move2 x=0.1 y=0.3 />
+<line2 x=0.35 y=0.3 />
+<line2 x=0.33 y=0.31 />
+<line2 x=0.33 y=0.29 />
+<line2 x=0.35 y=0.3 />
+<string x=0.37 y=0.320408 s="1" />
+<string x=0.1 y=0.320408 s="Feed1" />
+</svg>
+
+[CoCo]
+<icon chk="11452">
+# Coco flash icon generated by ChemSep
+# Flash
+WIDTH 7
+HEIGHT 10
+XGROW 3
+YGROW 5
+BODY 0 0 6 10 -1 2
+LINE THINLINE 7 6 3 6
+LINE THINLINE 3 6 5 7
+LINE THINLINE 5 7 3 8
+LINE THINLINE 3 8 7 8
+CONNECTION 3 0
+CONNECTION 3 10
+VCONNECTION 0 2 8
+VCONNECTION 6 2 5
+LINE THINLINE WAVE 0.5 5 5.5 5 0.3 2
+FREESPACE 7 2 7 5
+CONNECTION 7 6
+CONNECTION 7 8
+</icon>
+
+[Settings]
+<Graphs>
+ComboBox=ComboBox14
+-1
+ComboBox=ComboBox20
+-1
+ComboBox=ComboBox21
+-1
+CheckBox=CheckBox3
+0 Show settings
+CheckBox=CheckBox1
+1 Auto colors
+CheckBox=CheckBox2
+1 Auto points
+Edit=Edit9
+0.2
+StringGrid=StringGrid5
+2
+8
+Title
+Labels
+Stages
+Axis color
+Commands
+Box
+Labels box
+Import data
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+5
+9
+
+Title
+Start
+End
+Tic interval
+Small tics
+Grid
+Logarithmic
+Scientific notation
+x1
+
+
+
+
+
+
+
+
+y1
+
+
+
+
+
+
+
+
+x2
+
+
+
+
+
+
+
+
+y2
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+1
+14
+
+Label
+Plot X
+Plot Y
+X axis
+Y axis
+Units X
+Units Y
+Color
+Points
+Thickness
+Style
+1st stage
+Last stage
+</Graphs>
+<Parametrix>
+Edit=Edit1
+1
+CheckBox=CheckBox2
+0 Use old results
+CheckBox=CheckBox3
+1 Automatic
+CheckBox=CheckBox1
+0 Keep sep-files
+CheckBox=CheckBox4
+1 Restore original
+StringGrid=StringGrid1
+1
+6
+Name
+Variable
+Units
+Value
+Start/Valuelist
+End
+StringGrid=StringGrid2
+4
+1
+Name
+Variable
+Units
+Current Value
+StringGrid=StringGrid3
+1
+1
+None
+</Parametrix>
+<BinaryPhaseDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox21
+-1
+ComboBox=ComboBox3
+-1
+Edit=Edit1
+
+Edit=Edit2
+21
+Edit=Edit11
+1e-5
+Edit=Edit12
+1
+Edit=Edit3
+Title
+ComboBox=ComboBox4
+0
+ComboBox=ComboBox15
+0
+Edit=Edit17
+Plot font
+CheckBox=CheckBox2
+1 
+Color=Edit18
+-16777208
+SpinEdit=SpinEdit1
+1
+CheckBox=CheckBox3
+0 
+Color=Edit19
+-16777211
+Edit=Edit5
+
+StringGrid=StringGrid2
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color=BVLEbplineColor
+0
+SpinEdit=SpinEdit2
+1
+ComboBox=ComboBox13
+0
+Color=BVLEdplineColor
+0
+SpinEdit=SpinEdit3
+1
+ComboBox=ComboBox14
+0
+RadioButton=RadioButton3
+FALSE
+DrawSetColors=BVLEcolors
+14296628
+219310
+11272364
+2458881
+10052352
+3618615
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+ComboBox=ComboBox7
+1
+ComboBox=ComboBox11
+2
+ComboBox=ComboBox6
+0
+Memo=Memo1
+15
+# data sets are entered by setting a keyword, e,g, "pxy", "Txy", "xT", or "Txq"
+# data is then entered separated by spaces or tabs and each line terminate with a ";"
+# ~ signals the start of a new data set. Optional are name and component index of the variable
+# thus ~ p 0 x 3 z 5 a 7 @T=323.15 sets the type to pxza where x is component 3, 
+# z component 5, a component 7, and the temperature to 323.15K
+# a legend entry can be added by including a line "LGD Description"
+# T = temperature in K, p = pressure in Pa, x and y are liquid and vapor compositions
+# q and z are calculated bubble and dew equilibrium points (when deviation is selected)
+# the latter are computed via interpolation of the computed lines that belong to the data set
+# text labels can be added by "x y text"
+# lines starting with a # is regarded as a comment
+# the legend can be placed by specying corner Left Top with "LGDLT"
+# a text box can be added by "D-TextBox x y This is a box",
+# where X and Y are coordinates in the range from 0 to 1
+# D-Line x1 y1 x2 y2 draws a line and other primitives are available
+ComboBox=ComboBox17
+0
+ComboBox=ComboBox18
+2
+ComboBox=ComboBox19
+0
+ComboBox=ComboBox22
+-1
+Edit=Edit4
+1
+Edit=Edit6
+1
+Edit=Edit7
+1
+Edit=Edit8
+1
+Edit=Edit9
+20
+Edit=Edit10
+1e-4
+ValueListEditor=ValueListEditor1
+1
+select a parameter
+
+ComboBox=ComboBox20
+-1
+</BinaryPhaseDiagram>
+<TernaryPhaseDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox4
+-1
+Edit=Edit1
+
+Edit=Edit2
+21
+Edit=Edit3
+Ternary Phase Diagram
+Edit=Edit5
+
+</TernaryPhaseDiagram>
+<BinaryPropertyDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox3
+-1
+ComboBox=ComboBox5
+36
+ComboBox=ComboBox8
+36
+Edit=Edit1
+
+Edit=Edit2
+
+Edit=Edit6
+0
+Edit=Edit7
+1
+Edit=Edit3
+21
+StringGrid=StringGrid7
+5
+2
+
+
+
+
+
+
+
+
+
+
+Edit=Edit4
+Title
+ComboBox=ComboBox13
+0
+ComboBox=ComboBox14
+0
+Edit=Edit12
+Plot font
+CheckBox=CheckBox2
+1 
+Edit=Edit13
+Grid
+SpinEdit=SpinEdit1
+1
+CheckBox=CheckBox3
+0 
+Edit=Edit14
+Background
+Edit=Edit5
+
+StringGrid=StringGrid2
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid5
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid6
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color=BpropAlineColor
+16711680
+SpinEdit=SpinEdit2
+1
+ComboBox=ComboBox10
+0
+Color=BpropBlineColor
+255
+SpinEdit=SpinEdit3
+1
+ComboBox=ComboBox11
+0
+ComboBox=ComboBox9
+1
+ComboBox=ComboBox7
+2
+ComboBox=ComboBox6
+0
+Memo=Memo1
+12
+# data sets are entered by setting a keyword, e,g, "Ax", "ABx", "AT", or "Bp"
+# data is then entered separated by spaces or tabs and each line terminate with a ";"
+# a "~" signals a new data set 
+# T = temperature in K, p = pressure in Pa, x and y are liquid and vapor compositions
+# A and B are the properties 
+# text labels can be added by "x y text"
+# lines starting with a # is regarded as a comment
+# a legend can be added by including a line "LGD Description"
+# the legend can be placed by specying corner Left Top with "LGDLT"
+# a text box can be added by "D-TextBox x y This is a box",
+# where X and Y are coordinates in the range from 0 to 1
+# D-Line x1 y1 x2 y2 draws a line and other primitives are available
+</BinaryPropertyDiagram>
+[End Settings]
+
+[End of Input]
+
+[Results]
+1 Converged
+52 Iterations
+
+[Feed stream 1]
+
+          0 Stage
+          1 Flow rate
+     334.15 Temperature [K]
+     101325 Pressure [Pa]
+   -1159376 Enthalpy [J/kmol]
+   14675.07 Entropy [J/kmol/K]
+   0.866774 Vapour fraction [-]
+          1 Liquid phase split ratio [-]
+       0.25 Mole fraction of component  1
+        0.4 Mole fraction of component  2
+        0.2 Mole fraction of component  3
+       0.15 Mole fraction of component  4
+   0.866774 Flow rate
+   0.266484 Mole fraction of component  1
+   0.370818 Mole fraction of component  2
+   0.211438 Mole fraction of component  3
+    0.15126 Mole fraction of component  4
+   0.133226 Flow rate
+   0.142755 Mole fraction of component  1
+    0.58986 Mole fraction of component  2
+   0.125583 Mole fraction of component  3
+   0.141803 Mole fraction of component  4
+   69.65837 Molar mass
+   2.540612 Density
+8.442513E-06 Viscosity
+  0.0166404 Thermal conductivity
+   108579.6 Heat capacity
+   61.12238 Molar mass
+   762.0895 Density
+0.000399185 Viscosity
+   0.139403 Thermal conductivity
+     148063 Heat capacity
+  0.0187739 Surface tension
+
+[Top product]
+
+          0 Stage
+   0.866361 Flow rate
+     334.15 Temperature [K]
+     101325 Pressure [Pa]
+    3719300 Enthalpy [J/kmol]
+   22637.49 Entropy [J/kmol/K]
+          1 Vapour fraction [-]
+          1 Liquid phase split ratio [-]
+   0.266497 Mole fraction of component  1
+   0.370827 Mole fraction of component  2
+    0.21144 Mole fraction of component  3
+   0.151236 Mole fraction of component  4
+   0.866361 Flow rate
+   0.266497 Mole fraction of component  1
+   0.370827 Mole fraction of component  2
+    0.21144 Mole fraction of component  3
+   0.151236 Mole fraction of component  4
+   69.65818 Molar mass
+   2.540606 Density
+8.442506E-06 Viscosity
+  0.0166405 Thermal conductivity
+   108580.2 Heat capacity
+
+[Bottom product]
+
+          0 Stage
+   0.133639 Flow rate
+     334.15 Temperature [K]
+     101325 Pressure [Pa]
+-3.289104E+07 Enthalpy [J/kmol]
+  -37112.06 Entropy [J/kmol/K]
+          0 Vapour fraction [-]
+          1 Liquid phase split ratio [-]
+   0.143055 Mole fraction of component  1
+   0.589122 Mole fraction of component  2
+   0.125836 Mole fraction of component  3
+   0.141988 Mole fraction of component  4
+   0.133639 Flow rate
+   0.143055 Mole fraction of component  1
+   0.589122 Mole fraction of component  2
+   0.125836 Mole fraction of component  3
+   0.141988 Mole fraction of component  4
+   61.14997 Molar mass
+   762.0156 Density
+0.000398973 Viscosity
+    0.13937 Thermal conductivity
+   148101.5 Heat capacity
+  0.0187729 Surface tension
+
+[Flash heat duty]
+  -13904.43
+
+[K-values]
+
+Component     K-values:
+
+     1       1.862903
+     2       0.629458
+     3       1.680284
+     4       1.065135
+
+[End of Results]
+
+[ChemSep Output]
+ChemSep (TM) - COL2 7.15
+Copyright (c) 1988-2016 Harry Kooijman and Ross Taylor
+License: 2100- 6 LITE free license
+Build: 504875e8faa9                                      
+Checking data file C:\PROGRA~1\CHEMSE~3\flash.sep
+Reading configuration
+Reading component property libraries
+           1 110-54-3    
+           2 64-17-5     
+           3 96-37-7     
+           4 71-43-2     
+Reading thermodynamic property options
+Reading physical property options
+Reading thermodynamic property data
+Reading reaction data
+Reading specifications
+Checking Component Data
+  110-54-3 N-hexane                                          
+  64-17-5 Ethanol                                           
+  96-37-7 Methylcyclopentane                                
+  71-43-2 Benzene                                           
+Determining feed conditions
+Solving TP flash                                            
+Reading flash specifications
+Solving TP flash                                            
+
+
+         Iteration      V/F      Error
+            1         0.0000        4.1960
+            2         0.0000        3.6114
+            3         0.0000        3.6114
+            4         0.0000        3.6114
+            5         0.0000        3.6114
+            6         0.0000        3.6114
+            7         0.0000        3.6114
+            8         0.0000        3.6114
+            9       -39.3645        7.7239
+           10         1.5738        4.9550
+           11         1.4069        4.6787
+           12         1.3928        4.3742
+           13         1.3955        4.1219
+           14         1.4033        3.9150
+           15         1.4132        3.7444
+           16         1.4240        3.6034
+           17         1.4352        3.4875
+           18         1.4468        3.3936
+           19         1.4586        3.3199
+           20         1.4707        3.2654
+           21         1.4832        3.2296
+           22         1.4963        3.2127
+           23         1.5101        3.2155
+           24         1.5249        3.2393
+           25         1.5411        3.2863
+           26         1.5589        3.3598
+           27         1.5788        3.4650
+           28         1.6010        3.6093
+           29         1.6243        3.8049
+           30         1.6409        4.0701
+           31         1.6032        4.4223
+           32         1.2705        4.7032
+           33         0.8814        4.3383
+           34         0.8368        3.9523
+           35         0.8371        3.6708
+           36         0.8421        3.4219
+           37         0.8471        3.1866
+           38         0.8513        2.9580
+           39         0.8547        2.7325
+           40         0.8574        2.5084
+           41         0.8595        2.2849
+           42         0.8612        2.0616
+           43         0.8624        1.8383
+           44         0.8634        1.6149
+           45         0.8642        1.3913
+           46         0.8648        1.1676
+           47         0.8652        0.9438
+           48         0.8656        0.7199
+           49         0.8659        0.4960
+           50         0.8661        0.2719
+           51         0.8662        0.0478
+           52         0.8664       -0.1763
+Convergence obtained                                                                                                               
+ Time           16  milliseconds
+ Cleanup called with  T
+ FixMem driver done
+[End ChemSep Output]
