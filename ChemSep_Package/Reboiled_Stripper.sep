@@ -1,0 +1,1316 @@
+[ChemSep]
+Version=7.20
+Compiled=2017-7-13 05:27 6382cd8e28f8
+Name=d:\ChemSep\sims\examples\Seader_Ex_10-41_Reboiled_Stripperchk.sep
+Title=Reboiled Stripper from Seader and Henley
+User=rtaylor
+Date=2017-09-25
+Time=10:47:56
+
+[Paths]
+Device drivers path=c:\program files\chemsepl7v20\bin\
+Help and Info path=c:\program files\chemsepl7v20\help\
+Component data path=c:\program files\chemsepl7v20\pcd\
+Property data path=c:\program files\chemsepl7v20\ipd\
+Section data path=c:\program files\chemsepl7v20\ild\
+Executables path=c:\program files\chemsepl7v20\bin\
+Temporary path=C:\Users\rtaylor\AppData\Local\Temp\
+Scripts path=c:\program files\chemsepl7v20\bin\
+
+[Units]
+Temperature=F
+Flow=lbmol/h
+Mass flow=lb/h
+Vapour volumetric flow=m3/s
+Liquid volumetric flow=m3/s
+Pressure=psia
+Heat=Btu/h
+Enthalpy=Btu/lbmol
+Entropy=Btu/lbmol/R
+Fraction=_
+Length=ft
+1/Length=1/ft
+Area=ft2
+Volume=USgal
+Moles=kmol
+Mass=lb
+Angle=rad
+Velocity=ft/s
+Surface tension=N/m
+Density=lb/ft3
+Molar density=kmol/m3
+Viscosity=N/m2.s
+Molecular weight=kg/kmol
+Heat capacity=J/kmol/K
+Thermal conductivity=J/s/m/K
+Diffusivity=1e-8 m2/s
+Interaction parameter=J/mol
+Time=s
+
+[Components]
+7 Number of Components
+21 905 Library Offset, Index DT=2017-04-25,08:36:44 CHK=-104360354 CAS=7727-37-9 CID=Nitrogen
+Name=Nitrogen
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+31 1 Library Offset, Index DT=2017-04-25,08:36:44 CHK=183494279 CAS=74-82-8 CID=Methane
+Name=Methane
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+51 2 Library Offset, Index DT=2017-04-25,08:36:44 CHK=265089663 CAS=74-84-0 CID=Ethane
+Name=Ethane
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+67 3 Library Offset, Index DT=2017-04-25,08:36:44 CHK=397729727 CAS=74-98-6 CID=Propane
+Name=Propane
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+92 5 Library Offset, Index DT=2017-04-25,08:36:44 CHK=334727893 CAS=106-97-8 CID=N-butane
+Name=N-butane
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+115 7 Library Offset, Index DT=2017-04-25,08:36:44 CHK=204540290 CAS=109-66-0 CID=N-pentane
+Name=N-pentane
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+135 11 Library Offset, Index DT=2017-04-25,08:36:44 CHK=385355221 CAS=110-54-3 CID=N-hexane
+Name=N-hexane
+Lib=c:\program files\chemsepl7v20\pcd\chemsep1.pcd
+
+[Operation]
+2 Operation Column
+5 Operation kind Reboiled Absorber/Stripper
+5 Condenser None
+1 Reboiler Partial (Liquid product)
+8 Stages
+1 Feed stages
+0 Sidestream stages
+F=1
+S=
+0 Pumparound stages
+P=
+
+[Simulation Model]
+*  Simulation model *
+
+[Properties]
+350 BIP estimation temperature
+
+[Thermodynamics]
+2 K model EOS
+* * Activity coefficient *
+*  Wilson model *
+*  UNIQUAC model *
+3 Equation of State Cubic
+3 Cubic EOS Soave-RK
+*  Virial EOS *
+*  Vapour pressure *
+0 Henry's law
+*  Henry's default *
+
+[Enthalpy]
+4 Enthalpy Soave-RK
+1 Enthalpy reference state Vapour
+298.15 Enthalpy reference temperature
+1 Formation enthalpies Excluded
+298.15 Exergy surroundings temperature
+
+[Physical property models]
+0 No Check T range
+*  Cubic EOS *
+*  Virial EOS *
+*  Vapour model *
+*  Liquid mixture density *
+*  Liquid component density *
+*  Vapour mixture viscosity *
+*  Vapour mixture viscosity pressure correction *
+*  Vapour component viscosity *
+*  Liquid mixture viscosity *
+*  Liquid component viscosity *
+* Vapour mixture Cp
+1 Vapour component Cp T correlation
+*  Liquid mixture Cp *
+* Liquid component Cp
+*  Vapour mixture conductivity *
+*  Vapour component conductivity *
+*  Liquid mixture conductivity *
+*  Liquid component conductivity *
+*  Mixture surface tension *
+*  Component surface tension *
+*  Vignes MS D-model *
+*  D mixture model *
+*  Vapour Diffusion Coefficients *
+12 Default Liquid Diffusion Coefficients Kooijman
+*  Interfacial tension *
+
+[Property Data]
+
+[Soave-RK Data]
+      i      j          kij  Component Component
+      2      3      -0.0089  Methane/Ethane
+      2      4        0.018  Methane/Propane
+      2      5       0.0215  Methane/N-butane
+      2      6        0.018  Methane/N-pentane
+      2      7       0.0378  Methane/N-hexane
+      3      4      -0.0022  Ethane/Propane
+      3      5       0.0052  Ethane/N-butane
+      3      6       0.0056  Ethane/N-pentane
+      3      7      -0.0433  Ethane/N-hexane
+      4      5            0  Propane/N-butane
+      4      6       0.0233  Propane/N-pentane
+      4      7      -0.0022  Propane/N-hexane
+      5      6       0.0204  N-butane/N-pentane
+      5      7      -0.0111  N-butane/N-hexane
+
+[Reaction data]
+0 Number of reactions
+
+[Specifications]
+Ovhd vapor
+Bottoms
+
+[Heaters/Coolers]
+0 Number
+0 Column duty Qcolumn
+1 First stage
+7 Last stage
+0 Qcolumn lost to surroundings
+
+[Efficiencies]
+1 Default efficiency
+0 Number
+
+[Pressures]
+1 Column pressure Constant pressure
+* Condenser pressure
+1034214 Top pressure
+* Pressure Drop
+* Bottom pressure
+
+[Feeds]
+1 Number
+1 Feed state T & p
+1 Stage Feed{split}
+278.0389 Temperature
+1034214 Pressure
+* Vapour fraction
+7 componentflows
+0.0000277195 Component 1 flow
+0.00749813 Component 2 flow
+0.00926966 Component 3 flow
+0.0193054 Component 4 flow
+0.0218254 Component 5 flow
+0.0073356 Component 6 flow
+0.00423731 Component 7 flow
+
+[Reboiler]
+4 Type Bottom product flow rate
+0.0125154 Value Qreboiler
+*  Type *
+* Initialization guess
+
+[Monitored Variables]
+*
+
+
+[Solve options]
+1 Initialization Automatic
+1 Method Newton's method
+0.5 Flow Step limit
+10 Temperature Step limit
+1 Composition Step limit
+1 Flux Step limit
+0.000001 Accuracy
+30 Maximum iterations
+1 Iteration count & function vector
+0 T/V/L profiles
+0 X/Y profiles
+0 Variable and function vectors
+0 Jacobian
+1 History Screen
+History file=
+1 Feeds type Stage below
+0 Interactive
+0 Log thermodynamics
+0 Log enthalpy/entropy
+0 Log physical properties
+0 Log timing
+0 CO numeric differencing
+12936 Log from iteration
+0 CS K-value
+0 CS enthalpy
+0 CS entropy
+0 CS flash
+0 CS activity coefficient
+0 CS vapor pressuure
+0 CS density
+0 CS viscosity
+0 CS thermal conductivity
+0 CS heat capacity
+0 CS surface tension
+0 CS diffusivity
+* Trace treshold
+
+[Programs]
+Temporary file=SCRATCH.TMP
+User program=
+1 Compiler Gfortran
+*  Show windows *
+
+[User-Data]
+This is based on Example 10.41 in Separation Process Principles by J.D. Seader and E.J. Henley
+(page 400, 2nd Edition, WIley, 2006).
+
+In this example the rich gas is fed to a column where it comes into contact with two absorbent streams.
+Lean oil is fed to the top of the column and a secondary oil stream is fed to stage 4. The feed specifications
+are given in the feed panel.
+
+Seader and Henley do not say anything at all about what model should be used for estimating thermodynamic
+properties. We use the SRK model with interaction parameters from the ChemSep library (missing values have
+the value of zero).
+
+As an exercise: try the problem again with the interaction parameters set to zero (use the Reset button) and
+see how much of an influence the interaction parameters have in this example. Try using the PR model instead
+of the SRK EOS. Finally, the problem with the Chao-Seader method. Comapre the simulations for all these cases.
+[End User-Data]
+
+[FlowSheet]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   x="0.0"
+   y="0.0"
+   width="1.0"
+   height="1.0">
+<penwidth>1</penwidth>
+<move2 x=0 y=0 />
+<rect x1=0 y1=0 x2=1 y2=1 />
+<move2 x=0.35 y=0.3 />
+<line2 x=0.35 y=0.7 />
+<penstyle>Dot</penstyle>
+<move2 x=0.35 y=0.7 />
+<line2 x=0.55 y=0.7 />
+<penstyle>Solid</penstyle>
+<move2 x=0.55 y=0.7 />
+<line2 x=0.55 y=0.3 />
+<penstyle>Dot</penstyle>
+<move2 x=0.55 y=0.3 />
+<line2 x=0.35 y=0.3 />
+<penstyle>Solid</penstyle>
+<string x=0.442891 y=0.715403 s="1" />
+<arc x1=0.35 y1=0.75 x2=0.55 y2=0.65 x3=0.55 y3=0.7 x4=0.35 y4=0.7 />
+<string x=0.442891 y=0.315403 s="7" />
+<arc x1=0.35 y1=0.35 x2=0.55 y2=0.25 x3=0.35 y3=0.3 x4=0.55 y4=0.3 />
+<move2 x=0.45 y=0.75 />
+<line2 x=0.45 y=0.825 />
+<move2 x=0.45 y=0.825 />
+<line2 x=0.9 y=0.825 />
+<line2 x=0.88 y=0.835 />
+<line2 x=0.88 y=0.815 />
+<line2 x=0.9 y=0.825 />
+<string x=0.767299 y=0.875806 s="Ovhd vapor" />
+<move2 x=0.45 y=0.25 />
+<line2 x=0.45 y=0.175 />
+<move2 x=0.45 y=0.175 />
+<line2 x=0.625 y=0.175 />
+<line2 x=0.605 y=0.185 />
+<line2 x=0.605 y=0.165 />
+<line2 x=0.625 y=0.175 />
+<move2 x=0.7 y=0.25 />
+<line2 x=0.7 y=0.3 />
+<move2 x=0.7 y=0.3 />
+<line2 x=0.55 y=0.3 />
+<line2 x=0.57 y=0.29 />
+<line2 x=0.57 y=0.31 />
+<line2 x=0.55 y=0.3 />
+<ellipse x1=0.625 y1=0.25 x2=0.775 y2=0.1 />
+<string x=0.7 y=0.175 s="8" />
+<move2 x=0.625 y=0.1 />
+<line2 x=0.775 y=0.25 />
+<line2 x=0.753787 y=0.242929 />
+<move2 x=0.775 y=0.25 />
+<line2 x=0.767929 y=0.228787 />
+<move2 x=0.775 y=0.175 />
+<line2 x=0.9 y=0.175 />
+<line2 x=0.88 y=0.185 />
+<line2 x=0.88 y=0.165 />
+<line2 x=0.9 y=0.175 />
+<string x=0.809953 y=0.225806 s="Bottoms" />
+<move2 x=0.1 y=0.7 />
+<line2 x=0.35 y=0.7 />
+<line2 x=0.33 y=0.71 />
+<line2 x=0.33 y=0.69 />
+<line2 x=0.35 y=0.7 />
+<string x=0.37 y=0.730806 s="1" />
+<string x=0.1 y=0.730806 s="Feed" />
+</svg>
+
+[CoCo]
+<icon chk="26786">
+# Coco column icon generated by ChemSep
+# Sizes
+WIDTH           14
+HEIGHT          32
+DEFHEIGHT       32
+XGROW           4
+YGROW           14
+# column + Internals
+BODY            0 0 8 28 -1 4
+LINE            DASHED 0 4 8  4
+TEXT 4 3 1
+LINE            DASHED 0 24 8  24
+TEXT 4 23 7
+# No Condenser
+CONNECTION      4 0
+# Partial Reboiler
+BODY            10 28 14 32 -1 -1
+LINE            4 28 4 30
+LINE            ARROW 4 30 10 30
+LINE            12 28 12 24
+LINE            ARROW 12 24 8 24
+LINE            THINLINE OARROW 10 32 14 28
+CONNECTION      10 32
+CONNECTION      12 32
+CONNECTION      14 30
+# Connections and free space for feeds and sidestreams
+VCONNECTION     0 4 24
+VCONNECTION     8 5 23
+FREESPACE       9  5 12 23
+FREESPACE       13 5 14 23
+</icon>
+
+[Settings]
+<Graphs>
+ComboBox=ComboBox14
+-1
+ComboBox=ComboBox20
+-1
+ComboBox=ComboBox21
+-1
+CheckBox=CheckBox3
+0 Show settings
+CheckBox=CheckBox1
+1 Auto colors
+CheckBox=CheckBox2
+1 Auto points
+Edit=Edit9
+0.2
+StringGrid=StringGrid5
+2
+8
+Title
+Labels
+Stages
+Axis color
+Commands
+Box
+Labels box
+Import data
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+5
+9
+
+Title
+Start
+End
+Tic interval
+Small tics
+Grid
+Logarithmic
+Scientific notation
+x1
+
+
+
+
+
+
+
+
+y1
+
+
+
+
+
+
+
+
+x2
+
+
+
+
+
+
+
+
+y2
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+1
+14
+
+Label
+Plot X
+Plot Y
+X axis
+Y axis
+Units X
+Units Y
+Color
+Points
+Thickness
+Style
+1st stage
+Last stage
+</Graphs>
+<McCabe-Thiele>
+CheckBox=CheckBox10
+0 Show settings
+ComboBox=ComboBox22
+3
+ComboBox=ComboBox23
+5
+StringGrid=StringGrid7
+16
+2
+Title
+McCabe-Thiele diagram Propane - N-pentane
+Xlabel
+X Propane/(Propane+N-pentane)
+Ylabel
+Y Propane/(Propane+N-pentane)
+X interval
+0.2
+Y interval
+0.2
+X min
+0
+X max
+1
+Y min
+0
+Y max
+1
+X tics
+0
+Y tics
+0
+Axis color
+clBlack
+X grid
+Off
+Y grid
+Off
+Commands
+set label "ChemSep" at 1,0.02 right
+Stage numbers
+On
+StringGrid=StringGrid11
+5
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CheckBox=CheckBox45
+0 Lumped
+</McCabe-Thiele>
+<FUG>
+ComboBox=ComboBox75
+-1
+ComboBox=ComboBox76
+-1
+ComboBox=ComboBox77
+-1
+Edit=Edit55
+0.95
+Edit=Edit56
+0.95
+Edit=Edit57
+1.2
+</FUG>
+<Parametrix>
+Edit=Edit1
+1
+CheckBox=CheckBox2
+0 Use old results
+CheckBox=CheckBox3
+1 Automatic
+CheckBox=CheckBox1
+0 Keep sep-files
+CheckBox=CheckBox4
+1 Restore original
+StringGrid=StringGrid1
+1
+6
+
+
+
+
+
+
+StringGrid=StringGrid2
+4
+1
+
+
+
+
+StringGrid=StringGrid3
+1
+1
+None
+</Parametrix>
+<BinaryPhaseDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox21
+-1
+ComboBox=ComboBox3
+-1
+Edit=Edit1
+
+Edit=Edit2
+21
+Edit=Edit11
+1e-5
+Edit=Edit12
+1
+Edit=Edit3
+Title
+ComboBox=ComboBox4
+0
+ComboBox=ComboBox15
+0
+Edit=Edit17
+Plot font
+CheckBox=CheckBox2
+1 
+Color=Edit18
+0
+SpinEdit=SpinEdit1
+1
+CheckBox=CheckBox3
+0 
+Color=Edit19
+0
+Edit=Edit5
+
+StringGrid=StringGrid2
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color=BVLEbplineColor
+0
+SpinEdit=SpinEdit2
+1
+ComboBox=ComboBox13
+0
+Color=BVLEdplineColor
+0
+SpinEdit=SpinEdit3
+1
+ComboBox=ComboBox14
+0
+RadioButton=RadioButton3
+0 Fixed colors
+DrawSetColors=BVLEcolors
+14296628
+219310
+11272364
+2458881
+10052352
+3618615
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+ComboBox=ComboBox7
+1
+ComboBox=ComboBox11
+2
+ComboBox=ComboBox6
+0
+Memo=Memo1
+0
+ComboBox=ComboBox17
+0
+ComboBox=ComboBox18
+2
+ComboBox=ComboBox19
+0
+ComboBox=ComboBox22
+-1
+Edit=Edit4
+1
+Edit=Edit6
+1
+Edit=Edit7
+1
+Edit=Edit8
+1
+Edit=Edit9
+20
+Edit=Edit10
+1e-4
+ValueListEditor=ValueListEditor1
+1
+select a parameter
+
+ComboBox=ComboBox20
+-1
+</BinaryPhaseDiagram>
+<TernaryPhaseDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox4
+-1
+Edit=Edit1
+
+Edit=Edit2
+21
+Edit=Edit3
+Ternary Phase Diagram
+Edit=Edit5
+
+</TernaryPhaseDiagram>
+<BinaryPropertyDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox3
+-1
+ComboBox=ComboBox5
+36
+ComboBox=ComboBox8
+36
+Edit=Edit1
+
+Edit=Edit2
+
+Edit=Edit6
+0
+Edit=Edit7
+1
+Edit=Edit3
+21
+StringGrid=StringGrid7
+5
+2
+
+
+
+
+
+
+
+
+
+
+Edit=Edit4
+Title
+ComboBox=ComboBox13
+0
+ComboBox=ComboBox14
+0
+Edit=Edit12
+Plot font
+CheckBox=CheckBox2
+1 
+Edit=Edit13
+Grid
+SpinEdit=SpinEdit1
+1
+CheckBox=CheckBox3
+0 
+Edit=Edit14
+Background
+Edit=Edit5
+
+StringGrid=StringGrid2
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid5
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid6
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color=BpropAlineColor
+0
+SpinEdit=SpinEdit2
+1
+ComboBox=ComboBox10
+0
+Color=BpropBlineColor
+0
+SpinEdit=SpinEdit3
+1
+ComboBox=ComboBox11
+0
+ComboBox=ComboBox9
+1
+ComboBox=ComboBox7
+2
+ComboBox=ComboBox6
+0
+Memo=Memo1
+0
+</BinaryPropertyDiagram>
+[End Settings]
+
+[End of Input]
+ 
+[Results]
+  1 Converged
+      3 Iterations
+
+[Profiles]
+
+ Stage  Temperature      Pressure     Vapour Flow     Liquid Flow   Duties
+
+   1         333.22             1.034214E+06     4.642032E-02     7.315871E-02      0.000000E+00
+   2         349.14             1.034214E+06     6.064331E-02     7.769146E-02      0.000000E+00
+   3         356.28             1.034214E+06     6.517606E-02     7.932702E-02      0.000000E+00
+   4         360.53             1.034214E+06     6.681162E-02     7.944215E-02      0.000000E+00
+   5         364.45             1.034214E+06     6.692675E-02     7.824032E-02      0.000000E+00
+   6         370.02             1.034214E+06     6.572492E-02     7.565895E-02      0.000000E+00
+   7         379.16             1.034214E+06     6.314355E-02     7.235809E-02      0.000000E+00
+   8         392.58             1.034214E+06     5.984269E-02     1.251540E-02      1.284622E+06
+
+[Enthalpies/Entropies]
+
+ Stage  Vap.Enthalpy    Liq.Enthalpy    Vap.Entropy     Liq.Entropy     Liq.MixEnth
+
+   1    0.1777576E+07  -0.1613005E+08  -0.1393151E+04  -0.5269412E+05  -0.4163865E+06
+   2    0.3588161E+07  -0.1416856E+08   0.1809730E+04  -0.4734316E+05  -0.1466171E+07
+   3    0.4554975E+07  -0.1326831E+08   0.2994182E+04  -0.4507413E+05  -0.6673483E+06
+   4    0.5165504E+07  -0.1276369E+08   0.3846936E+04  -0.4346397E+05  -0.2809243E+06
+   5    0.5732782E+07  -0.1236343E+08   0.5317705E+04  -0.4146436E+05  -0.1010394E+06
+   6    0.6547483E+07  -0.1183468E+08   0.8211191E+04  -0.3828003E+05  -0.5123861E+05
+   7    0.7954126E+07  -0.1085258E+08   0.1335967E+05  -0.3318047E+05  -0.1291768E+06
+   8    0.1023315E+08  -0.9031196E+07   0.2098295E+05  -0.2604550E+05  -0.3797179E+06
+
+[Vapour Properties]
+
+ Stage  Moleweight      Density         Viscosity       Heat capacity   Th. Conduct.    Std density
+
+   1    0.4767688E+02   0.2090860E+02   0.9027888E-05   0.9777874E+05   0.2354664E-01   0.2012533E+01
+   2    0.5451457E+02   0.2348938E+02   0.9007519E-05   0.1161943E+06   0.2369136E-01   0.2301165E+01
+   3    0.5746494E+02   0.2454376E+02   0.9022112E-05   0.1246128E+06   0.2400182E-01   0.2425705E+01
+   4    0.5906542E+02   0.2505521E+02   0.9042400E-05   0.1292232E+06   0.2425352E-01   0.2493265E+01
+   5    0.6028565E+02   0.2534645E+02   0.9073534E-05   0.1326917E+06   0.2453255E-01   0.2544773E+01
+   6    0.6175466E+02   0.2557811E+02   0.9128948E-05   0.1368530E+06   0.2496141E-01   0.2606783E+01
+   7    0.6409190E+02   0.2590152E+02   0.9222005E-05   0.1436211E+06   0.2565558E-01   0.2705442E+01
+   8    0.6786919E+02   0.2657167E+02   0.9341286E-05   0.1549014E+06   0.2656788E-01   0.2864889E+01
+
+[Liquid Properties]
+
+ Stage  Moleweight      Density         Viscosity       Heat capacity   Th. Conduct.    Surf. tension   Std Density
+
+   1    0.5767951E+02   0.5268903E+03   0.1132778E-03   0.1556366E+06   0.8993061E-01   0.7741915E-02   0.5752342E+03
+   2    0.5996995E+02   0.5157905E+03   0.1030104E-03   0.1719524E+06   0.8608643E-01   0.6876467E-02   0.5871773E+03
+   3    0.6126627E+02   0.5119451E+03   0.9964367E-04   0.1778955E+06   0.8477716E-01   0.6561605E-02   0.5931286E+03
+   4    0.6229107E+02   0.5108462E+03   0.9842878E-04   0.1807364E+06   0.8412019E-01   0.6425428E-02   0.5972456E+03
+   5    0.6355591E+02   0.5113403E+03   0.9831909E-04   0.1841150E+06   0.8356797E-01   0.6355874E-02   0.6017932E+03
+   6    0.6556798E+02   0.5128715E+03   0.9891165E-04   0.1890249E+06   0.8289996E-01   0.6285884E-02   0.6085099E+03
+   7    0.6875926E+02   0.5142489E+03   0.9970359E-04   0.2003738E+06   0.8159605E-01   0.6127824E-02   0.6184411E+03
+   8    0.7301519E+02   0.5133208E+03   0.9947876E-04   0.2158160E+06   0.7961256E-01   0.5801900E-02   0.6306076E+03
+
+[Vapour phase compositions]
+
+ Component     Mole fractions on stages:        1 to  5
+
+           1  7.345837236E-05  2.542628089E-06  9.245541942E-08  3.438456697E-09  1.294681188E-10
+           2  4.452043680E-02  3.175711635E-03  2.236631022E-04  1.571691028E-05  1.103568826E-06
+           3  1.438254906E-01  3.858874719E-02  8.979483330E-03  1.979066656E-03  4.239186605E-04
+           4  3.758350792E-01  2.544473361E-01  1.373056235E-01  6.766161358E-02  3.162792625E-02
+           5  3.897742147E-01  6.301354821E-01  7.570224417E-01  8.061904564E-01  7.999250029E-01
+           6  3.949302929E-02  6.341301785E-02  8.392595308E-02  1.094585632E-01  1.493898776E-01
+           7  6.478291043E-03  1.023716245E-02  1.254274280E-02  1.469457973E-02  1.863217089E-02
+
+ Component     Mole fractions on stages:        6 to  8
+
+           1  4.915846385E-12  1.879470797E-13  7.205869616E-15
+           2  7.732742979E-08  5.379470332E-09  3.651952941E-10
+           3  8.868138793E-05  1.792553755E-05  3.374131780E-06
+           4  1.405968240E-02  5.799221549E-03  2.094738589E-03
+           5  7.422340079E-01  6.249679783E-01  4.484620470E-01
+           6  2.140938916E-01  3.070659471E-01  4.019622197E-01
+           7  2.952365933E-02  6.214892210E-02  1.474776202E-01
+
+[Liquid phase compositions]
+
+ Component     Mole fractions on stages:        1 to  5
+
+           1  2.107655856E-06  7.756167759E-08  2.895972494E-09  1.090716114E-10  4.129540114E-12
+           2  2.632436596E-03  1.876329784E-04  1.323726146E-05  9.297146266E-07  6.496130649E-08
+           3  3.198738352E-02  7.533050614E-03  1.666910047E-03  3.572140701E-04  7.457705698E-05
+           4  2.110182048E-01  1.152807597E-01  5.707857217E-02  2.673700637E-02  1.190386840E-02
+           5  5.652856053E-01  6.755157435E-01  7.186070406E-01  7.134555734E-01  6.636646577E-01
+           6  1.268884743E-01  1.403936127E-01  1.607337009E-01  1.942998891E-01  2.493436330E-01
+           7  6.218578781E-02  6.108912297E-02  6.190053618E-02  6.514938731E-02  7.501319882E-02
+
+ Component     Mole fractions on stages:        6 to  8
+
+           1  1.568958105E-13  5.999843395E-15  2.336237688E-16
+           2  4.492965998E-09  3.055429757E-10  2.031399778E-11
+           3  1.504432335E-05  2.878361753E-06  5.078253117E-07
+           4  4.936288425E-03  1.833184883E-03  5.825594638E-04
+           5  5.631159423E-01  4.143177285E-01  2.510558406E-01
+           6  3.281390481E-01  4.075829298E-01  4.344584914E-01
+           7  1.037936724E-01  1.762632782E-01  3.139026007E-01
+
+[Reaction rates]
+
+ Component reaction rates on stages:            1 to  5
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           4 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           5 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           6 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           7 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:            6 to  8
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           4 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           5 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           6 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           7 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+[Slopes]
+
+ Component     Equilibrium slopes on stages:    1 to  5
+
+           1  3.485036860E+01  3.278195290E+01  3.192573448E+01  3.152481308E+01  3.135173209E+01
+           2  1.609594499E+01  1.686595124E+01  1.689239419E+01  1.690481884E+01  1.698808685E+01
+           3  3.907160865E+00  4.933579466E+00  5.339745386E+00  5.529476045E+00  5.681913850E+00
+           4  1.389724270E+00  1.819064379E+00  2.171463001E+00  2.407512489E+00  2.595102469E+00
+           5  9.443264617E-01  1.057692546E+00  9.002271266E-01  7.406529201E-01  6.770134466E-01
+           6  3.205537681E-01  4.647201162E-01  5.383270739E-01  5.854634243E-01  6.337769589E-01
+           7  1.088991209E-01  1.749882338E-01  2.117479700E-01  2.363010590E-01  2.620859025E-01
+
+ Component     Equilibrium slopes on stages:    6 to  8
+
+           1  3.133195674E+01  3.132542153E+01  3.088738915E+01
+           2  1.721079265E+01  1.760631807E+01  1.797752265E+01
+           3  5.894155533E+00  6.227586796E+00  6.644254232E+00
+           4  2.817544432E+00  3.148554964E+00  3.589208953E+00
+           5  7.216278338E-01  8.983000757E-01  1.249092323E+00
+           6  7.098874413E-01  8.280635502E-01  9.413665663E-01
+           7  3.062041060E-01  3.981504316E-01  5.763046510E-01
+
+[Reboiler Heat Duty]
+  1.2846224752041E+06 Duty
+  3.9257678256597E+02 Temperature
+
+[UA Column]
+  *                   UA
+
+[K-values]
+
+ Component     K-values on stages:              1 to  5
+
+           1  3.485311521E+01  3.278201515E+01  3.192551717E+01  3.152476314E+01  3.135170411E+01
+           2  1.691225417E+01  1.692512511E+01  1.689647840E+01  1.690509093E+01  1.698809473E+01
+           3  4.496319323E+00  5.122592307E+00  5.386903328E+00  5.540281879E+00  5.684303929E+00
+           4  1.781055239E+00  2.207196901E+00  2.405554603E+00  2.530635309E+00  2.656945186E+00
+           5  6.895173182E-01  9.328213123E-01  1.053458149E+00  1.129979900E+00  1.205315055E+00
+           6  3.112420540E-01  4.516802219E-01  5.221428539E-01  5.633485624E-01  5.991325131E-01
+           7  1.041763928E-01  1.675774999E-01  2.026273703E-01  2.255520790E-01  2.483852332E-01
+
+ Component     K-values on stages:              6 to  8
+
+           1  3.133191755E+01  3.132531068E+01  3.088738307E+01
+           2  1.721077567E+01  1.760626418E+01  1.797751955E+01
+           3  5.894674407E+00  6.227687523E+00  6.644276479E+00
+           4  2.848229510E+00  3.163467920E+00  3.595750662E+00
+           5  1.318083812E+00  1.508426831E+00  1.786303971E+00
+           6  6.524486886E-01  7.533827468E-01  9.252028179E-01
+           7  2.844456569E-01  3.525914345E-01  4.698196833E-01
+
+[Molecular weights]
+
+     1        28.014
+     2        16.043
+     3        30.070
+     4        44.097
+     5        58.123
+     6        72.150
+     7        86.177
+
+[Feed stream 1]                              
+
+            1 Stage Number
+  6.9499219500000E-02 Flow rate
+  2.7803890000000E+02 Temperature [K]
+  1.0342140000000E+06 Pressure [Pa]
+ -1.9157892193492E+07 Enthalpy [J/kmol]
+ -6.4536497769530E+04 Entropy [J/kmol/K]
+  1.5199450823668E-01 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  3.9884620574768E-04 Mole fraction of component    1
+  1.0788797419516E-01 Mole fraction of component    2
+  1.3337790074031E-01 Mole fraction of component    3
+  2.7777865908264E-01 Mole fraction of component    4
+  3.1403805908928E-01 Mole fraction of component    5
+  1.0554938678124E-01 Mole fraction of component    6
+  6.0969173905615E-02 Mole fraction of component    7
+  1.0563499690736E-02 Flow rate
+  2.3012769982276E-03 Mole fraction of component    1
+  5.1417401845497E-01 Mole fraction of component    2
+  2.4548951087573E-01 Mole fraction of component    3
+  1.7529460105768E-01 Mole fraction of component    4
+  5.5842481327511E-02 Mole fraction of component    5
+  6.1437164428959E-03 Mole fraction of component    6
+  7.5439484298835E-04 Mole fraction of component    7
+  5.8935719809264E-02 Flow rate
+  5.7858988549464E-05 Mole fraction of component    1
+  3.5066219960397E-02 Mole fraction of component    2
+  1.1328327963409E-01 Mole fraction of component    3
+  2.9614766041044E-01 Mole fraction of component    4
+  3.6031642669240E-01 Mole fraction of component    5
+  1.2336662514617E-01 Mole fraction of component    6
+  7.1761929167952E-02 Mole fraction of component    7
+  2.7179210176660E+01 Molar mass
+  1.3156554166037E+01 Density
+  9.1941654164247E-06 Viscosity
+  2.5639230274833E-02 Thermal conductivity
+  5.2533975645551E+04 Heat capacity
+  5.3057641971242E+01 Molar mass
+  5.7560506157631E+02 Density
+  1.7574263369813E-04 Viscosity
+  1.0770646313294E-01 Thermal conductivity
+  1.2816332750186E+05 Heat capacity
+  1.1878442301031E-02 Surface tension
+
+[Reflashed Feed stream 1]                    
+
+            1 Stage Number
+  6.9499219500000E-02 Flow rate
+  2.7803890000000E+02 Temperature [K]
+  1.0342140000000E+06 Pressure [Pa]
+ -1.9157892193492E+07 Enthalpy [J/kmol]
+ -6.4536497769530E+04 Entropy [J/kmol/K]
+  1.5199450823668E-01 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  3.9884620574768E-04 Mole fraction of component    1
+  1.0788797419516E-01 Mole fraction of component    2
+  1.3337790074031E-01 Mole fraction of component    3
+  2.7777865908264E-01 Mole fraction of component    4
+  3.1403805908928E-01 Mole fraction of component    5
+  1.0554938678124E-01 Mole fraction of component    6
+  6.0969173905615E-02 Mole fraction of component    7
+  1.0563499690736E-02 Flow rate
+  2.3012769982276E-03 Mole fraction of component    1
+  5.1417401845497E-01 Mole fraction of component    2
+  2.4548951087573E-01 Mole fraction of component    3
+  1.7529460105768E-01 Mole fraction of component    4
+  5.5842481327511E-02 Mole fraction of component    5
+  6.1437164428959E-03 Mole fraction of component    6
+  7.5439484298835E-04 Mole fraction of component    7
+  5.8935719809264E-02 Flow rate
+  5.7858988549464E-05 Mole fraction of component    1
+  3.5066219960397E-02 Mole fraction of component    2
+  1.1328327963409E-01 Mole fraction of component    3
+  2.9614766041044E-01 Mole fraction of component    4
+  3.6031642669240E-01 Mole fraction of component    5
+  1.2336662514617E-01 Mole fraction of component    6
+  7.1761929167952E-02 Mole fraction of component    7
+  2.7179210176660E+01 Molar mass
+  1.3156554166037E+01 Density
+  9.1941654164247E-06 Viscosity
+  2.5639230274833E-02 Thermal conductivity
+  5.2533975645551E+04 Heat capacity
+  5.3057641971242E+01 Molar mass
+  5.7560506157631E+02 Density
+  1.7574263369813E-04 Viscosity
+  1.0770646313294E-01 Thermal conductivity
+  1.2816332750186E+05 Heat capacity
+  1.1878442301031E-02 Surface tension
+
+[Top product]                                
+
+            1 Stage Number
+  5.6983819500000E-02 Flow rate
+  3.3322358356996E+02 Temperature [K]
+  1.0342140000000E+06 Pressure [Pa]
+  1.1616095912336E+06 Enthalpy [J/kmol]
+ -5.8460325298119E+02 Entropy [J/kmol/K]
+  1.0000000000000E+00 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  4.8644510388901E-04 Mole fraction of component    1
+  1.3158349273227E-01 Mole fraction of component    2
+  1.6267167988216E-01 Mole fraction of component    3
+  3.3865945113535E-01 Mole fraction of component    4
+  3.2787089206989E-01 Mole fraction of component    5
+  3.3310827762477E-02 Mole fraction of component    6
+  5.4172113139633E-03 Mole fraction of component    7
+  4.6420319809264E-02 Flow rate
+  4.8644510388901E-04 Mole fraction of component    1
+  1.3158349273227E-01 Mole fraction of component    2
+  1.6267167988216E-01 Mole fraction of component    3
+  3.3865945113535E-01 Mole fraction of component    4
+  3.2787089206989E-01 Mole fraction of component    5
+  3.3310827762477E-02 Mole fraction of component    6
+  5.4172113139633E-03 Mole fraction of component    7
+  4.3877079896971E+01 Molar mass
+  1.8650570868019E+01 Density
+  9.3010475201137E-06 Viscosity
+  2.5221416935740E-02 Thermal conductivity
+  8.9533642351277E+04 Heat capacity
+  *                   Surface tension
+
+[Bottom product]                             
+
+            8 Stage Number
+  1.2515400000000E-02 Flow rate
+  3.9257678256597E+02 Temperature [K]
+  1.0342140000000E+06 Pressure [Pa]
+ -9.0311960066885E+06 Enthalpy [J/kmol]
+ -2.6045498729309E+04 Entropy [J/kmol/K]
+  0.0000000000000E+00 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  2.3362376881457E-16 Mole fraction of component    1
+  2.0313997775215E-11 Mole fraction of component    2
+  5.0782531173510E-07 Mole fraction of component    3
+  5.8255946382170E-04 Mole fraction of component    4
+  2.5105584059934E-01 Mole fraction of component    5
+  4.3445849142347E-01 Mole fraction of component    6
+  3.1390260066774E-01 Mole fraction of component    7
+  1.2515400000000E-02 Flow rate
+  2.3362376881457E-16 Mole fraction of component    1
+  2.0313997775215E-11 Mole fraction of component    2
+  5.0782531173510E-07 Mole fraction of component    3
+  5.8255946382170E-04 Mole fraction of component    4
+  2.5105584059934E-01 Mole fraction of component    5
+  4.3445849142347E-01 Mole fraction of component    6
+  3.1390260066774E-01 Mole fraction of component    7
+  7.3015189144323E+01 Molar mass
+  5.1332083453616E+02 Density
+  9.9478759250099E-05 Viscosity
+  7.9612562986269E-02 Thermal conductivity
+  2.1581601525471E+05 Heat capacity
+  5.8018995137041E-03 Surface tension
+
+
+[End of Results]
+
+[ChemSep Output]
+ChemSep (TM) - COL2 7.20
+Copyright (c) 1988-2017 Harry Kooijman and Ross Taylor
+License: 2100- 6 LITE free license
+Build: 489d26ddfe5a                                      
+Checking data file d:\ChemSep\sims\examples\SEAC70~1.SEP
+Reading configuration
+Reading component property libraries
+           1 7727-37-9   
+           2 74-82-8     
+           3 74-84-0     
+           4 74-98-6     
+           5 106-97-8    
+           6 109-66-0    
+           7 110-54-3    
+Reading thermodynamic property options
+Reading physical property options
+Warning! Using consistent EOS for density and VLE
+Reading thermodynamic property data
+Reading reaction data
+Reading specifications
+Checking Component Data
+  7727-37-9 Nitrogen                                          
+  74-82-8 Methane                                           
+  74-84-0 Ethane                                            
+  74-98-6 Propane                                           
+  106-97-8 N-butane                                          
+  109-66-0 N-pentane                                         
+  110-54-3 N-hexane                                          
+Determining feed conditions
+Solving TP flash                                            
+Run level: Initialization                          
+Generating initial flow profiles
+Generating initial composition profiles
+ Init           46  milliseconds
+Run level: Complete model                          
+
+      Iteration    log(Err/Tol)
+         0           3.4701
+         1           3.5771
+         2           2.1182
+         3          -2.4643
+Run level: Report                                  
+Convergence obtained in 3 iterations                         
+ Time           16  milliseconds
+ Cleanup called with  T
+ FixMem driver done
+[End ChemSep Output]

@@ -1,0 +1,1943 @@
+[ChemSep]
+Version=7.30
+Compiled=2017-12-18 00:56 480e865c13c2
+Name=Z:\Users\user\Desktop\chemSep\Seader_Ex_11_4_Extractive_Distillation.sep
+Title=Extractive Distillation
+User=ehsan
+Date=2018-03-14
+Time=19:44:56
+
+[Paths]
+Device drivers path=c:\users\ehsan\desktop\chemsep\bin\
+Help and Info path=c:\users\ehsan\desktop\chemsep\help\
+Component data path=c:\users\ehsan\desktop\chemsep\pcd\
+Property data path=c:\users\ehsan\desktop\chemsep\ipd\
+Section data path=c:\users\ehsan\desktop\chemsep\ild\
+Executables path=c:\users\ehsan\desktop\chemsep\bin\
+Temporary path=C:\users\ehsan\Temp\
+Scripts path=c:\users\ehsan\desktop\chemsep\bin\
+
+[Units]
+Temperature=K
+Flow=kmol/h
+Mass flow=kg/s
+Vapour volumetric flow=m3/s
+Liquid volumetric flow=m3/s
+Pressure=atm
+Heat=J/s
+Enthalpy=J/kmol
+Entropy=J/kmol/K
+Fraction=_
+Length=m
+1/Length=1/m
+Area=m2
+Volume=m3
+Moles=kmol
+Mass=kg
+Angle=rad
+Velocity=m/s
+Surface tension=N/m
+Density=kg/m3
+Molar density=kmol/m3
+Viscosity=N/m2.s
+Molecular weight=kg/kmol
+Heat capacity=J/kmol/K
+Thermal conductivity=J/s/m/K
+Diffusivity=m2/s
+Interaction parameter=J/mol
+Time=s
+
+[Components]
+3 Number of Components
+62 1051 Library Offset, Index DT=2017-11-24,20:17:34 CHK=94164435 CAS=67-64-1 CID=Acetone
+Name=Acetone
+Lib=c:\users\ehsan\desktop\chemsep\pcd\chemsep1.pcd
+26 1521 Library Offset, Index DT=2017-11-24,20:17:34 CHK=-12456750 CAS=67-66-3 CID=Chloroform
+Name=Chloroform
+Lib=c:\users\ehsan\desktop\chemsep\pcd\chemsep1.pcd
+125 501 Library Offset, Index DT=2017-11-24,20:17:34 CHK=53432397 CAS=71-43-2 CID=Benzene
+Name=Benzene
+Lib=c:\users\ehsan\desktop\chemsep\pcd\chemsep1.pcd
+
+[Operation]
+2 Operation Column
+2 Operation kind Extractive Distillation
+1 Condenser Total (Liquid product)
+1 Reboiler Partial (Liquid product)
+65 Stages
+1 Feed stages
+0 Sidestream stages
+F=30
+S=
+0 Pumparound stages
+P=
+
+[Simulation Model]
+*  Simulation model *
+
+[Properties]
+350 BIP estimation temperature
+1 Estimation BIPs
+
+[Thermodynamics]
+4 K model DECHEMA
+8 * Activity coefficient UNIFAC
+*  Wilson model *
+*  UNIQUAC model *
+1 Equation of State Ideal gas law
+*  Cubic EOS *
+*  Virial EOS *
+1 Vapour pressure Antoine
+0 Henry's law
+*  Henry's default *
+
+[Enthalpy]
+3 Enthalpy Excess
+1 Enthalpy reference state Vapour
+298.15 Enthalpy reference temperature
+1 Formation enthalpies Excluded
+298.15 Exergy surroundings temperature
+
+[Physical property models]
+0 No Check T range
+*  Cubic EOS *
+*  Virial EOS *
+*  Vapour model *
+*  Liquid mixture density *
+*  Liquid component density *
+*  Vapour mixture viscosity *
+*  Vapour mixture viscosity pressure correction *
+*  Vapour component viscosity *
+*  Liquid mixture viscosity *
+*  Liquid component viscosity *
+* Vapour mixture Cp
+1 Vapour component Cp T correlation
+*  Liquid mixture Cp *
+* Liquid component Cp
+*  Vapour mixture conductivity *
+*  Vapour component conductivity *
+*  Liquid mixture conductivity *
+*  Liquid component conductivity *
+*  Mixture surface tension *
+*  Component surface tension *
+*  Vignes MS D-model *
+*  D mixture model *
+*  Vapour Diffusion Coefficients *
+12 Default Liquid Diffusion Coefficients Kooijman
+*  Interfacial tension *
+
+[UNIFAC Data]
+3 Components Cid Group{id,number}:
+1 1 1 19 1  # Acetone
+2 51 1  # Chloroform
+3 10 6  # Benzene
+4 Sub-Groups Gid R Q Main-id # Sub-id Sub-name Main-name:
+1 0.9011 0.848 1 # 1 CH3 CH2
+2 1.6724 1.488 9 # 19 CH3CO CH2CO
+3 2.87 2.41 23 # 51 CHCl3 CCl3
+4 0.5313 0.4 3 # 10 ACH ACH
+4 Main-Group-BIPs:
+A
+1 2 476.4 26.76 # 1-9 = CH2-CH2CO
+1 3 24.9 36.7 # 1-23 = CH2-CCl3
+1 4 61.13 -11.12 # 1-3 = CH2-ACH
+2 3 -354.6 552.1 # 9-23 = CH2CO-CCl3
+2 4 140.1 25.77 # 9-3 = CH2CO-ACH
+3 4 288.5 -231.9 # 23-3 = CCl3-ACH
+0 6
+
+[Reaction data]
+0 Number of reactions
+
+[Specifications]
+Top
+Bottom
+
+[Heaters/Coolers]
+0 Number
+0 Column duty Qcolumn
+2 First stage
+64 Last stage
+0 Qcolumn lost to surroundings
+
+[Efficiencies]
+1 Default efficiency
+0 Number
+
+[Pressures]
+1 Column pressure Constant pressure
+101325 Condenser pressure
+101325 Top pressure
+* Pressure Drop
+* Bottom pressure
+
+[Feeds]
+1 Number
+2 Feed state p & V
+30 Stage Feed1{split}
+* Temperature
+101325 Pressure
+0 Vapour fraction
+3 componentflows
+0.00333333 Component 1 flow
+0.00333333 Component 2 flow
+0.0211111 Component 3 flow
+
+[Condenser]
+1 Type Reflux ratio
+10 Value Qcondenser
+*  Type *
+* Initialization guess
+
+[Reboiler]
+8 Type Component recovery
+0.05 Value Qreboiler
+1 1st comp.
+*  Type *
+* Initialization guess
+
+[Monitored Variables]
+*
+
+
+[Solve options]
+1 Initialization Automatic
+2 Method 2-pass constant H first
+0.5 Flow Step limit
+10 Temperature Step limit
+1 Composition Step limit
+1 Flux Step limit
+0.000001 Accuracy
+50 Maximum iterations
+1 Iteration count & function vector
+0 T/V/L profiles
+0 X/Y profiles
+0 Variable and function vectors
+0 Jacobian
+1 History Screen
+History file=
+1 Feeds type Stage below
+0 Interactive
+0 Log thermodynamics
+0 Log enthalpy/entropy
+0 Log physical properties
+0 Log timing
+0 CO numeric differencing
+* Log from iteration
+0 CS K-value
+0 CS enthalpy
+0 CS entropy
+0 CS flash
+0 CS activity coefficient
+0 CS vapor pressuure
+0 CS density
+0 CS viscosity
+0 CS thermal conductivity
+0 CS heat capacity
+0 CS surface tension
+0 CS diffusivity
+* Trace treshold
+
+[Programs]
+Temporary file=SCRATCH.TMP
+User program=
+1 Compiler Gfortran
+1 Show windows Hidden
+
+[User-Data]
+This example is inspired by Example 11.4 on page 416 of Separation Process Principles (2nd Ed.) by
+J.D. Seader and E.J. Henley.
+
+A mixture of acetone and chloroform is to be separated by extrative distillation using benzene as the solvent.
+
+Note the use of a recovery specification.
+
+Exercise: Design a second column to recover (most of) the solvent benzene.
+[End User-Data]
+
+[FlowSheet]
+<svg x="0.0" y="0.0" width="1.0" height="1.0">
+<penwidth>1</penwidth>
+<move2 x=0 y=0 />
+<rect x1=0 y1=0 x2=1 y2=1 />
+<move2 x=0.35 y=0.3 />
+<line2 x=0.35 y=0.7 />
+<penstyle>Dot</penstyle>
+<move2 x=0.35 y=0.7 />
+<line2 x=0.55 y=0.7 />
+<penstyle>Solid</penstyle>
+<move2 x=0.55 y=0.7 />
+<line2 x=0.55 y=0.3 />
+<penstyle>Dot</penstyle>
+<move2 x=0.55 y=0.3 />
+<line2 x=0.35 y=0.3 />
+<penstyle>Solid</penstyle>
+<string x=0.438327 y=0.725292 s="2" />
+<arc x1=0.35 y1=0.75 x2=0.55 y2=0.65 x3=0.55 y3=0.7 x4=0.35 y4=0.7 />
+<string x=0.426654 y=0.325292 s="64" />
+<arc x1=0.35 y1=0.35 x2=0.55 y2=0.25 x3=0.35 y3=0.3 x4=0.55 y4=0.3 />
+<move2 x=0.45 y=0.75 />
+<line2 x=0.45 y=0.825 />
+<move2 x=0.45 y=0.825 />
+<line2 x=0.625 y=0.825 />
+<line2 x=0.605 y=0.835 />
+<line2 x=0.605 y=0.815 />
+<line2 x=0.625 y=0.825 />
+<move2 x=0.7 y=0.75 />
+<line2 x=0.7 y=0.7 />
+<move2 x=0.7 y=0.7 />
+<line2 x=0.55 y=0.7 />
+<line2 x=0.57 y=0.69 />
+<line2 x=0.57 y=0.71 />
+<line2 x=0.55 y=0.7 />
+<ellipse x1=0.625 y1=0.9 x2=0.775 y2=0.75 />
+<string x=0.7 y=0.825 s="1" />
+<move2 x=0.775 y=0.9 />
+<line2 x=0.625 y=0.75 />
+<line2 x=0.646213 y=0.757071 />
+<move2 x=0.625 y=0.75 />
+<line2 x=0.632071 y=0.771213 />
+<move2 x=0.55 y=0.7 />
+<line2 x=0.9 y=0.7 />
+<line2 x=0.88 y=0.71 />
+<line2 x=0.88 y=0.69 />
+<line2 x=0.9 y=0.7 />
+<string x=0.82607 y=0.770584 s="Top" />
+<move2 x=0.45 y=0.25 />
+<line2 x=0.45 y=0.175 />
+<move2 x=0.45 y=0.175 />
+<line2 x=0.625 y=0.175 />
+<line2 x=0.605 y=0.185 />
+<line2 x=0.605 y=0.165 />
+<line2 x=0.625 y=0.175 />
+<move2 x=0.7 y=0.25 />
+<line2 x=0.7 y=0.3 />
+<move2 x=0.7 y=0.3 />
+<line2 x=0.55 y=0.3 />
+<line2 x=0.57 y=0.29 />
+<line2 x=0.57 y=0.31 />
+<line2 x=0.55 y=0.3 />
+<ellipse x1=0.625 y1=0.25 x2=0.775 y2=0.1 />
+<string x=0.7 y=0.175 s="65" />
+<move2 x=0.625 y=0.1 />
+<line2 x=0.775 y=0.25 />
+<line2 x=0.753787 y=0.242929 />
+<move2 x=0.775 y=0.25 />
+<line2 x=0.767929 y=0.228787 />
+<move2 x=0.775 y=0.175 />
+<line2 x=0.9 y=0.175 />
+<line2 x=0.88 y=0.185 />
+<line2 x=0.88 y=0.165 />
+<line2 x=0.9 y=0.175 />
+<string x=0.771595 y=0.245584 s="Bottom" />
+<move2 x=0.35 y=0.519355 />
+<line2 x=0.55 y=0.519355 />
+<move2 x=0.1 y=0.519355 />
+<line2 x=0.35 y=0.519355 />
+<line2 x=0.33 y=0.529355 />
+<line2 x=0.33 y=0.509355 />
+<line2 x=0.35 y=0.519355 />
+<string x=0.37 y=0.569938 s="30" />
+<string x=0.1 y=0.569938 s="Feed1" />
+</svg>
+
+[CoCo]
+<icon chk="39496">
+# Coco column icon generated by ChemSep
+# Sizes
+WIDTH           14
+HEIGHT          37
+DEFHEIGHT       37
+XGROW           4
+YGROW           18
+# column + Internals
+BODY            0 4 8 33 -1 4
+LINE            DASHED 0 8 8  8
+TEXT 4 7 2
+LINE            DASHED 0 29 8  29
+TEXT 4 28 64
+# Total Condenser
+BODY            10 0 14 4 -1 -1
+LINE            4 4 4 2
+LINE            ARROW 4 2 10 2
+LINE            12 4 12 8
+LINE            ARROW 12 8 8 8
+LINE            THINLINE OARROW 14 0 10 4
+CONNECTION      14 0
+LINE            12 8 14 8
+CONNECTION      14 8
+# Partial Reboiler
+BODY            10 33 14 37 -1 -1
+LINE            4 33 4 35
+LINE            ARROW 4 35 10 35
+LINE            12 33 12 29
+LINE            ARROW 12 29 8 29
+LINE            THINLINE OARROW 10 37 14 33
+CONNECTION      10 37
+CONNECTION      12 37
+CONNECTION      14 35
+# Connections and free space for feeds and sidestreams
+VCONNECTION     0 8 29
+VCONNECTION     8 9 28
+FREESPACE       9  9 12 28
+FREESPACE       13 9 14 28
+LINE            DASHED 0 18 8  18
+TEXT 4 17 30
+</icon>
+
+[Settings]
+<Graphs>
+ComboBox=ComboBox14
+-1
+ComboBox=ComboBox20
+-1
+ComboBox=ComboBox21
+-1
+CheckBox=CheckBox3
+0 Show settings
+CheckBox=CheckBox1
+1 Auto colors
+CheckBox=CheckBox2
+1 Auto points
+Edit=Edit9
+0.2
+StringGrid=StringGrid5
+2
+8
+Title
+Labels
+Stages
+Axis color
+Commands
+Box
+Labels box
+Import data
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+5
+9
+
+Title
+Start
+End
+Tic interval
+Small tics
+Grid
+Logarithmic
+Scientific notation
+x1
+
+
+
+
+
+
+
+
+y1
+
+
+
+
+
+
+
+
+x2
+
+
+
+
+
+
+
+
+y2
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+1
+14
+
+Label
+Plot X
+Plot Y
+X axis
+Y axis
+Units X
+Units Y
+Color
+Points
+Thickness
+Style
+1st stage
+Last stage
+</Graphs>
+<McCabe-Thiele>
+CheckBox=CheckBox10
+0 Show settings
+ComboBox=ComboBox22
+-1
+ComboBox=ComboBox23
+-1
+StringGrid=StringGrid7
+16
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid11
+5
+3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CheckBox=CheckBox45
+0 Lumped
+</McCabe-Thiele>
+<FUG>
+ComboBox=ComboBox75
+0
+ComboBox=ComboBox76
+2
+ComboBox=ComboBox77
+0
+Edit=Edit55
+0.95
+Edit=Edit56
+0.95
+Edit=Edit57
+1.2
+</FUG>
+<Parametrix>
+Edit=Edit1
+1
+CheckBox=CheckBox2
+0 Use old results
+CheckBox=CheckBox3
+1 Automatic
+CheckBox=CheckBox1
+0 Keep sep-files
+CheckBox=CheckBox4
+1 Restore original
+StringGrid=StringGrid1
+1
+6
+Name
+Variable
+Units
+Value
+Start/Valuelist
+End
+StringGrid=StringGrid2
+4
+1
+Name
+Variable
+Units
+Current Value
+StringGrid=StringGrid3
+1
+1
+None
+</Parametrix>
+<BinaryPhaseDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox21
+-1
+ComboBox=ComboBox3
+-1
+Edit=Edit1
+
+Edit=Edit2
+21
+Edit=Edit11
+1e-5
+Edit=Edit12
+1
+Edit=Edit3
+Title
+ComboBox=ComboBox4
+0
+ComboBox=ComboBox15
+0
+Edit=Edit17
+Plot font
+CheckBox=CheckBox2
+1 
+Color=Edit18
+0
+SpinEdit=SpinEdit1
+1
+CheckBox=CheckBox3
+0 
+Color=Edit19
+0
+Edit=Edit5
+
+StringGrid=StringGrid2
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color=BVLEbplineColor
+0
+SpinEdit=SpinEdit2
+1
+ComboBox=ComboBox13
+0
+Color=BVLEdplineColor
+0
+SpinEdit=SpinEdit3
+1
+ComboBox=ComboBox14
+0
+RadioButton=RadioButton3
+0 Fixed colors
+DrawSetColors=BVLEcolors
+14296628
+219310
+11272364
+2458881
+10052352
+3618615
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+ComboBox=ComboBox7
+1
+ComboBox=ComboBox11
+2
+ComboBox=ComboBox6
+0
+Memo=Memo1
+0
+ComboBox=ComboBox17
+0
+ComboBox=ComboBox18
+2
+ComboBox=ComboBox19
+0
+ComboBox=ComboBox22
+-1
+Edit=Edit4
+1
+Edit=Edit6
+1
+Edit=Edit7
+1
+Edit=Edit8
+1
+Edit=Edit9
+20
+Edit=Edit10
+1e-4
+ValueListEditor=ValueListEditor1
+1
+select a parameter
+
+ComboBox=ComboBox20
+-1
+</BinaryPhaseDiagram>
+<TernaryPhaseDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox4
+-1
+Edit=Edit1
+
+Edit=Edit2
+21
+Edit=Edit3
+Ternary Phase Diagram
+Edit=Edit5
+
+</TernaryPhaseDiagram>
+<BinaryPropertyDiagram>
+ComboBox=ComboBox1
+-1
+ComboBox=ComboBox2
+-1
+ComboBox=ComboBox3
+-1
+ComboBox=ComboBox5
+36
+ComboBox=ComboBox8
+36
+Edit=Edit1
+
+Edit=Edit2
+
+Edit=Edit6
+0
+Edit=Edit7
+1
+Edit=Edit3
+21
+StringGrid=StringGrid7
+5
+2
+
+
+
+
+
+
+
+
+
+
+Edit=Edit4
+Title
+ComboBox=ComboBox13
+0
+ComboBox=ComboBox14
+0
+Edit=Edit12
+Plot font
+CheckBox=CheckBox2
+1 
+Edit=Edit13
+Grid
+SpinEdit=SpinEdit1
+1
+CheckBox=CheckBox3
+0 
+Edit=Edit14
+Background
+Edit=Edit5
+
+StringGrid=StringGrid2
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid3
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid4
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid5
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+StringGrid=StringGrid6
+7
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Color=BpropAlineColor
+0
+SpinEdit=SpinEdit2
+1
+ComboBox=ComboBox10
+0
+Color=BpropBlineColor
+0
+SpinEdit=SpinEdit3
+1
+ComboBox=ComboBox11
+0
+ComboBox=ComboBox9
+1
+ComboBox=ComboBox7
+2
+ComboBox=ComboBox6
+0
+Memo=Memo1
+0
+</BinaryPropertyDiagram>
+<RatingPanel>
+Edit=Edit61
+
+Edit=Edit58
+1
+Edit=Edit59
+0.75
+Edit=Edit64
+1.0
+Edit=Edit60
+0.8
+Edit=Edit85
+20
+Edit=Edit86
+200
+RadioButton=RadioButton11
+1 Koch
+RadioButton=RadioButton12
+0 Norton
+RadioButton=RadioButton13
+0 Specified
+RadioButton=RadioButton9
+1 Duss-Taylor
+RadioButton=RadioButton10
+0 Traditional
+StringGrid=StringGrid22
+13
+5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Edit=Edit67
+0.32
+Edit=Edit63
+8160
+Edit=Edit62
+1.0
+Edit=Edit65
+1400
+Edit=Edit68
+8
+ComboBox=ComboBox80
+0
+StringGrid=StringGrid27
+8
+2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RatingPanel>
+[End Settings]
+
+[End of Input]
+ 
+[Results]
+  1 Converged
+     33 Iterations
+
+[Profiles]
+
+ Stage  Temperature      Pressure     Vapour Flow     Liquid Flow   Duties
+
+   1         329.40             1.013250E+05     3.167861E-03     3.167861E-02     -1.032352E+06
+   2         329.40             1.013250E+05     3.484647E-02     3.167849E-02      0.000000E+00
+   3         329.41             1.013250E+05     3.484635E-02     3.167834E-02      0.000000E+00
+   4         329.41             1.013250E+05     3.484620E-02     3.167816E-02      0.000000E+00
+   5         329.41             1.013250E+05     3.484602E-02     3.167794E-02      0.000000E+00
+   6         329.41             1.013250E+05     3.484580E-02     3.167766E-02      0.000000E+00
+   7         329.41             1.013250E+05     3.484552E-02     3.167731E-02      0.000000E+00
+   8         329.42             1.013250E+05     3.484518E-02     3.167689E-02      0.000000E+00
+   9         329.42             1.013250E+05     3.484475E-02     3.167636E-02      0.000000E+00
+  10         329.43             1.013250E+05     3.484422E-02     3.167570E-02      0.000000E+00
+  11         329.44             1.013250E+05     3.484356E-02     3.167487E-02      0.000000E+00
+  12         329.44             1.013250E+05     3.484273E-02     3.167384E-02      0.000000E+00
+  13         329.45             1.013250E+05     3.484170E-02     3.167253E-02      0.000000E+00
+  14         329.47             1.013250E+05     3.484039E-02     3.167087E-02      0.000000E+00
+  15         329.49             1.013250E+05     3.483873E-02     3.166874E-02      0.000000E+00
+  16         329.51             1.013250E+05     3.483660E-02     3.166597E-02      0.000000E+00
+  17         329.54             1.013250E+05     3.483383E-02     3.166230E-02      0.000000E+00
+  18         329.57             1.013250E+05     3.483017E-02     3.165734E-02      0.000000E+00
+  19         329.62             1.013250E+05     3.482520E-02     3.165042E-02      0.000000E+00
+  20         329.69             1.013250E+05     3.481828E-02     3.164039E-02      0.000000E+00
+  21         329.78             1.013250E+05     3.480825E-02     3.162525E-02      0.000000E+00
+  22         329.92             1.013250E+05     3.479311E-02     3.160142E-02      0.000000E+00
+  23         330.13             1.013250E+05     3.476928E-02     3.156261E-02      0.000000E+00
+  24         330.47             1.013250E+05     3.473047E-02     3.149841E-02      0.000000E+00
+  25         331.01             1.013250E+05     3.466627E-02     3.139384E-02      0.000000E+00
+  26         331.88             1.013250E+05     3.456170E-02     3.123301E-02      0.000000E+00
+  27         333.25             1.013250E+05     3.440087E-02     3.100961E-02      0.000000E+00
+  28         335.25             1.013250E+05     3.417747E-02     3.073945E-02      0.000000E+00
+  29         337.92             1.013250E+05     3.390731E-02     3.046982E-02      0.000000E+00
+  30         341.06             1.013250E+05     3.363769E-02     5.809447E-02      0.000000E+00
+  31         341.06             1.013250E+05     3.348457E-02     5.809442E-02      0.000000E+00
+  32         341.06             1.013250E+05     3.348452E-02     5.809435E-02      0.000000E+00
+  33         341.06             1.013250E+05     3.348446E-02     5.809426E-02      0.000000E+00
+  34         341.06             1.013250E+05     3.348436E-02     5.809414E-02      0.000000E+00
+  35         341.07             1.013250E+05     3.348424E-02     5.809397E-02      0.000000E+00
+  36         341.07             1.013250E+05     3.348407E-02     5.809374E-02      0.000000E+00
+  37         341.08             1.013250E+05     3.348384E-02     5.809343E-02      0.000000E+00
+  38         341.09             1.013250E+05     3.348353E-02     5.809300E-02      0.000000E+00
+  39         341.10             1.013250E+05     3.348310E-02     5.809242E-02      0.000000E+00
+  40         341.12             1.013250E+05     3.348252E-02     5.809164E-02      0.000000E+00
+  41         341.14             1.013250E+05     3.348174E-02     5.809059E-02      0.000000E+00
+  42         341.17             1.013250E+05     3.348069E-02     5.808919E-02      0.000000E+00
+  43         341.21             1.013250E+05     3.347929E-02     5.808734E-02      0.000000E+00
+  44         341.27             1.013250E+05     3.347744E-02     5.808491E-02      0.000000E+00
+  45         341.34             1.013250E+05     3.347501E-02     5.808180E-02      0.000000E+00
+  46         341.45             1.013250E+05     3.347190E-02     5.807788E-02      0.000000E+00
+  47         341.58             1.013250E+05     3.346798E-02     5.807311E-02      0.000000E+00
+  48         341.75             1.013250E+05     3.346321E-02     5.806754E-02      0.000000E+00
+  49         341.97             1.013250E+05     3.345764E-02     5.806140E-02      0.000000E+00
+  50         342.24             1.013250E+05     3.345150E-02     5.805520E-02      0.000000E+00
+  51         342.57             1.013250E+05     3.344530E-02     5.804973E-02      0.000000E+00
+  52         342.96             1.013250E+05     3.343983E-02     5.804603E-02      0.000000E+00
+  53         343.41             1.013250E+05     3.343613E-02     5.804519E-02      0.000000E+00
+  54         343.90             1.013250E+05     3.343529E-02     5.804808E-02      0.000000E+00
+  55         344.42             1.013250E+05     3.343818E-02     5.805503E-02      0.000000E+00
+  56         344.96             1.013250E+05     3.344513E-02     5.806575E-02      0.000000E+00
+  57         345.51             1.013250E+05     3.345585E-02     5.807945E-02      0.000000E+00
+  58         346.05             1.013250E+05     3.346955E-02     5.809517E-02      0.000000E+00
+  59         346.58             1.013250E+05     3.348527E-02     5.811224E-02      0.000000E+00
+  60         347.13             1.013250E+05     3.350234E-02     5.813063E-02      0.000000E+00
+  61         347.70             1.013250E+05     3.352073E-02     5.815131E-02      0.000000E+00
+  62         348.32             1.013250E+05     3.354141E-02     5.817640E-02      0.000000E+00
+  63         349.01             1.013250E+05     3.356650E-02     5.820923E-02      0.000000E+00
+  64         349.78             1.013250E+05     3.359933E-02     5.825414E-02      0.000000E+00
+  65         350.65             1.013250E+05     3.364424E-02     2.460990E-02      1.041528E+06
+
+[Enthalpies/Entropies]
+
+ Stage  Vap.Enthalpy    Liq.Enthalpy    Vap.Entropy     Liq.Entropy     Liq.MixEnth
+
+   1   -0.2720890E+08  -0.2720890E+08  -0.7230700E+05  -0.7230700E+05   0.5356479E+03
+   2    0.2416841E+07  -0.2720886E+08   0.7382300E+04  -0.7229868E+05   0.7255667E+03
+   3    0.2416980E+07  -0.2720881E+08   0.7390562E+04  -0.7228883E+05   0.9595292E+03
+   4    0.2417152E+07  -0.2720874E+08   0.7400408E+04  -0.7227714E+05   0.1247820E+04
+   5    0.2417364E+07  -0.2720866E+08   0.7412152E+04  -0.7226326E+05   0.1603161E+04
+   6    0.2417625E+07  -0.2720857E+08   0.7426171E+04  -0.7224676E+05   0.2041305E+04
+   7    0.2417949E+07  -0.2720845E+08   0.7442916E+04  -0.7222715E+05   0.2581783E+04
+   8    0.2418348E+07  -0.2720831E+08   0.7462923E+04  -0.7220382E+05   0.3248847E+04
+   9    0.2418843E+07  -0.2720813E+08   0.7486840E+04  -0.7217606E+05   0.4072657E+04
+  10    0.2419457E+07  -0.2720791E+08   0.7515441E+04  -0.7214303E+05   0.5090782E+04
+  11    0.2420219E+07  -0.2720763E+08   0.7549663E+04  -0.7210370E+05   0.6350087E+04
+  12    0.2421169E+07  -0.2720730E+08   0.7590643E+04  -0.7205683E+05   0.7909095E+04
+  13    0.2422356E+07  -0.2720688E+08   0.7639769E+04  -0.7200091E+05   0.9840867E+04
+  14    0.2423845E+07  -0.2720637E+08   0.7698754E+04  -0.7193409E+05   0.1223638E+05
+  15    0.2425722E+07  -0.2720574E+08   0.7769740E+04  -0.7185399E+05   0.1520808E+05
+  16    0.2428104E+07  -0.2720498E+08   0.7855457E+04  -0.7175758E+05   0.1889284E+05
+  17    0.2431156E+07  -0.2720406E+08   0.7959466E+04  -0.7164081E+05   0.2345187E+05
+  18    0.2435110E+07  -0.2720297E+08   0.8086545E+04  -0.7149810E+05   0.2906257E+05
+  19    0.2440317E+07  -0.2720176E+08   0.8243336E+04  -0.7132143E+05   0.3589070E+05
+  20    0.2447318E+07  -0.2720052E+08   0.8439407E+04  -0.7109900E+05   0.4401934E+05
+  21    0.2456987E+07  -0.2719953E+08   0.8689006E+04  -0.7081290E+05   0.5328844E+05
+  22    0.2470784E+07  -0.2719943E+08   0.9013889E+04  -0.7043609E+05   0.6296615E+05
+  23    0.2491215E+07  -0.2720141E+08   0.9447533E+04  -0.6992893E+05   0.7115281E+05
+  24    0.2522592E+07  -0.2720749E+08   0.1004035E+05  -0.6923872E+05   0.7393046E+05
+  25    0.2572120E+07  -0.2722000E+08   0.1086275E+05  -0.6831095E+05   0.6486498E+05
+  26    0.2650861E+07  -0.2723889E+08   0.1199607E+05  -0.6712816E+05   0.3693926E+05
+  27    0.2773358E+07  -0.2725520E+08   0.1349202E+05  -0.6578329E+05  -0.1042178E+05
+  28    0.2954735E+07  -0.2724443E+08   0.1529029E+05  -0.6453820E+05  -0.6373733E+05
+  29    0.3205198E+07  -0.2717002E+08   0.1713807E+05  -0.6374394E+05  -0.1027720E+06
+  30    0.3516669E+07  -0.2700529E+08   0.1861446E+05  -0.6356813E+05  -0.1184375E+06
+  31    0.3516758E+07  -0.2700525E+08   0.1861500E+05  -0.6356791E+05  -0.1184904E+06
+  32    0.3516881E+07  -0.2700519E+08   0.1861575E+05  -0.6356760E+05  -0.1185629E+06
+  33    0.3517049E+07  -0.2700510E+08   0.1861677E+05  -0.6356719E+05  -0.1186620E+06
+  34    0.3517279E+07  -0.2700499E+08   0.1861817E+05  -0.6356662E+05  -0.1187978E+06
+  35    0.3517593E+07  -0.2700483E+08   0.1862008E+05  -0.6356584E+05  -0.1189835E+06
+  36    0.3518022E+07  -0.2700461E+08   0.1862269E+05  -0.6356478E+05  -0.1192375E+06
+  37    0.3518609E+07  -0.2700431E+08   0.1862626E+05  -0.6356332E+05  -0.1195849E+06
+  38    0.3519410E+07  -0.2700391E+08   0.1863113E+05  -0.6356134E+05  -0.1200597E+06
+  39    0.3520502E+07  -0.2700336E+08   0.1863777E+05  -0.6355864E+05  -0.1207081E+06
+  40    0.3521988E+07  -0.2700260E+08   0.1864681E+05  -0.6355496E+05  -0.1215927E+06
+  41    0.3524008E+07  -0.2700158E+08   0.1865907E+05  -0.6354997E+05  -0.1227979E+06
+  42    0.3526746E+07  -0.2700018E+08   0.1867567E+05  -0.6354321E+05  -0.1244364E+06
+  43    0.3530442E+07  -0.2699829E+08   0.1869803E+05  -0.6353412E+05  -0.1266580E+06
+  44    0.3535408E+07  -0.2699575E+08   0.1872800E+05  -0.6352194E+05  -0.1296585E+06
+  45    0.3542040E+07  -0.2699232E+08   0.1876783E+05  -0.6350580E+05  -0.1336895E+06
+  46    0.3550822E+07  -0.2698775E+08   0.1882023E+05  -0.6348464E+05  -0.1390654E+06
+  47    0.3562324E+07  -0.2698170E+08   0.1888820E+05  -0.6345736E+05  -0.1461639E+06
+  48    0.3577182E+07  -0.2697377E+08   0.1897474E+05  -0.6342297E+05  -0.1554129E+06
+  49    0.3596038E+07  -0.2696352E+08   0.1908225E+05  -0.6338089E+05  -0.1672540E+06
+  50    0.3619447E+07  -0.2695048E+08   0.1921161E+05  -0.6333146E+05  -0.1820743E+06
+  51    0.3647749E+07  -0.2693425E+08   0.1936095E+05  -0.6327642E+05  -0.2001040E+06
+  52    0.3680922E+07  -0.2691457E+08   0.1952447E+05  -0.6321950E+05  -0.2212923E+06
+  53    0.3718487E+07  -0.2689137E+08   0.1969172E+05  -0.6316650E+05  -0.2451984E+06
+  54    0.3759520E+07  -0.2686489E+08   0.1984806E+05  -0.6312491E+05  -0.2709442E+06
+  55    0.3802845E+07  -0.2683556E+08   0.1997672E+05  -0.6310267E+05  -0.2972646E+06
+  56    0.3847376E+07  -0.2680387E+08   0.2006199E+05  -0.6310669E+05  -0.3226507E+06
+  57    0.3892543E+07  -0.2677006E+08   0.2009251E+05  -0.6314143E+05  -0.3455263E+06
+  58    0.3938663E+07  -0.2673380E+08   0.2006332E+05  -0.6320812E+05  -0.3643854E+06
+  59    0.3987152E+07  -0.2669398E+08   0.1997598E+05  -0.6330497E+05  -0.3778354E+06
+  60    0.4040567E+07  -0.2664856E+08   0.1983659E+05  -0.6342814E+05  -0.3845386E+06
+  61    0.4102463E+07  -0.2659457E+08   0.1965256E+05  -0.6357338E+05  -0.3830804E+06
+  62    0.4177116E+07  -0.2652823E+08   0.1942819E+05  -0.6373838E+05  -0.3718032E+06
+  63    0.4269092E+07  -0.2644527E+08   0.1915910E+05  -0.6392634E+05  -0.3486588E+06
+  64    0.4382717E+07  -0.2634134E+08   0.1882438E+05  -0.6415143E+05  -0.3111472E+06
+  65    0.4521526E+07  -0.2621253E+08   0.1837360E+05  -0.6444774E+05  -0.2564261E+06
+
+[Vapour Properties]
+
+ Stage  Moleweight      Density         Viscosity       Heat capacity   Th. Conduct.    Std density
+
+   1    0.5808559E+02   0.2148974E+01   0.8314358E-05   0.7996036E+05   0.1358357E-01   0.2451904E+01
+   2    0.5808757E+02   0.2149041E+01   0.8314472E-05   0.7996175E+05   0.1358360E-01   0.2451988E+01
+   3    0.5809002E+02   0.2149123E+01   0.8314612E-05   0.7996347E+05   0.1358364E-01   0.2452091E+01
+   4    0.5809303E+02   0.2149224E+01   0.8314784E-05   0.7996558E+05   0.1358370E-01   0.2452218E+01
+   5    0.5809674E+02   0.2149349E+01   0.8314996E-05   0.7996819E+05   0.1358376E-01   0.2452375E+01
+   6    0.5810132E+02   0.2149503E+01   0.8315258E-05   0.7997141E+05   0.1358384E-01   0.2452568E+01
+   7    0.5810697E+02   0.2149693E+01   0.8315581E-05   0.7997539E+05   0.1358394E-01   0.2452807E+01
+   8    0.5811395E+02   0.2149928E+01   0.8315981E-05   0.7998030E+05   0.1358406E-01   0.2453101E+01
+   9    0.5812258E+02   0.2150218E+01   0.8316474E-05   0.7998637E+05   0.1358421E-01   0.2453466E+01
+  10    0.5813325E+02   0.2150576E+01   0.8317085E-05   0.7999388E+05   0.1358440E-01   0.2453916E+01
+  11    0.5814649E+02   0.2151021E+01   0.8317842E-05   0.8000319E+05   0.1358463E-01   0.2454475E+01
+  12    0.5816291E+02   0.2151572E+01   0.8318781E-05   0.8001475E+05   0.1358493E-01   0.2455168E+01
+  13    0.5818335E+02   0.2152258E+01   0.8319951E-05   0.8002914E+05   0.1358530E-01   0.2456031E+01
+  14    0.5820887E+02   0.2153113E+01   0.8321411E-05   0.8004708E+05   0.1358577E-01   0.2457108E+01
+  15    0.5824085E+02   0.2154184E+01   0.8323245E-05   0.8006952E+05   0.1358636E-01   0.2458458E+01
+  16    0.5828117E+02   0.2155532E+01   0.8325560E-05   0.8009771E+05   0.1358711E-01   0.2460160E+01
+  17    0.5833238E+02   0.2157241E+01   0.8328513E-05   0.8013327E+05   0.1358808E-01   0.2462322E+01
+  18    0.5839814E+02   0.2159431E+01   0.8332328E-05   0.8017840E+05   0.1358931E-01   0.2465098E+01
+  19    0.5848384E+02   0.2162278E+01   0.8337349E-05   0.8023605E+05   0.1359090E-01   0.2468715E+01
+  20    0.5859785E+02   0.2166053E+01   0.8344129E-05   0.8031032E+05   0.1359294E-01   0.2473528E+01
+  21    0.5875369E+02   0.2171191E+01   0.8353593E-05   0.8040697E+05   0.1359552E-01   0.2480106E+01
+  22    0.5897418E+02   0.2178425E+01   0.8367346E-05   0.8053421E+05   0.1359873E-01   0.2489413E+01
+  23    0.5929881E+02   0.2189018E+01   0.8388224E-05   0.8070409E+05   0.1360252E-01   0.2503117E+01
+  24    0.5979640E+02   0.2205159E+01   0.8421166E-05   0.8093454E+05   0.1360657E-01   0.2524121E+01
+  25    0.6058334E+02   0.2230535E+01   0.8474309E-05   0.8125275E+05   0.1360996E-01   0.2557339E+01
+  26    0.6183896E+02   0.2270767E+01   0.8559219E-05   0.8170073E+05   0.1361080E-01   0.2610341E+01
+  27    0.6378384E+02   0.2332574E+01   0.8687175E-05   0.8234529E+05   0.1360733E-01   0.2692438E+01
+  28    0.6655497E+02   0.2419386E+01   0.8857422E-05   0.8329595E+05   0.1360432E-01   0.2809413E+01
+  29    0.6996270E+02   0.2523158E+01   0.9041477E-05   0.8471243E+05   0.1362631E-01   0.2953260E+01
+  30    0.7333621E+02   0.2620493E+01   0.9184935E-05   0.8670327E+05   0.1371600E-01   0.3095662E+01
+  31    0.7333810E+02   0.2620552E+01   0.9185033E-05   0.8670357E+05   0.1371594E-01   0.3095742E+01
+  32    0.7334069E+02   0.2620634E+01   0.9185166E-05   0.8670398E+05   0.1371586E-01   0.3095851E+01
+  33    0.7334423E+02   0.2620746E+01   0.9185348E-05   0.8670455E+05   0.1371574E-01   0.3096001E+01
+  34    0.7334907E+02   0.2620899E+01   0.9185598E-05   0.8670532E+05   0.1371559E-01   0.3096205E+01
+  35    0.7335570E+02   0.2621108E+01   0.9185940E-05   0.8670637E+05   0.1371538E-01   0.3096485E+01
+  36    0.7336476E+02   0.2621395E+01   0.9186407E-05   0.8670781E+05   0.1371509E-01   0.3096868E+01
+  37    0.7337717E+02   0.2621787E+01   0.9187046E-05   0.8670978E+05   0.1371469E-01   0.3097391E+01
+  38    0.7339412E+02   0.2622323E+01   0.9187920E-05   0.8671245E+05   0.1371414E-01   0.3098107E+01
+  39    0.7341728E+02   0.2623056E+01   0.9189113E-05   0.8671609E+05   0.1371339E-01   0.3099085E+01
+  40    0.7344891E+02   0.2624056E+01   0.9190742E-05   0.8672102E+05   0.1371236E-01   0.3100419E+01
+  41    0.7349203E+02   0.2625420E+01   0.9192962E-05   0.8672769E+05   0.1371095E-01   0.3102240E+01
+  42    0.7355074E+02   0.2627279E+01   0.9195984E-05   0.8673667E+05   0.1370901E-01   0.3104718E+01
+  43    0.7363051E+02   0.2629805E+01   0.9200087E-05   0.8674868E+05   0.1370634E-01   0.3108085E+01
+  44    0.7373858E+02   0.2633229E+01   0.9205640E-05   0.8676463E+05   0.1370267E-01   0.3112647E+01
+  45    0.7388442E+02   0.2637853E+01   0.9213122E-05   0.8678559E+05   0.1369763E-01   0.3118803E+01
+  46    0.7408019E+02   0.2644065E+01   0.9223144E-05   0.8681279E+05   0.1369071E-01   0.3127067E+01
+  47    0.7434114E+02   0.2652356E+01   0.9236462E-05   0.8684750E+05   0.1368122E-01   0.3138082E+01
+  48    0.7468570E+02   0.2663317E+01   0.9253972E-05   0.8689083E+05   0.1366826E-01   0.3152627E+01
+  49    0.7513506E+02   0.2677635E+01   0.9276672E-05   0.8694346E+05   0.1365067E-01   0.3171595E+01
+  50    0.7571183E+02   0.2696045E+01   0.9305574E-05   0.8700522E+05   0.1362705E-01   0.3195942E+01
+  51    0.7643733E+02   0.2719249E+01   0.9341541E-05   0.8707475E+05   0.1359585E-01   0.3226566E+01
+  52    0.7732739E+02   0.2747774E+01   0.9385058E-05   0.8714928E+05   0.1355555E-01   0.3264138E+01
+  53    0.7838712E+02   0.2781804E+01   0.9435968E-05   0.8722507E+05   0.1350503E-01   0.3308871E+01
+  54    0.7960554E+02   0.2820995E+01   0.9493238E-05   0.8729855E+05   0.1344409E-01   0.3360303E+01
+  55    0.8095214E+02   0.2864349E+01   0.9554851E-05   0.8736845E+05   0.1337401E-01   0.3417145E+01
+  56    0.8237670E+02   0.2910193E+01   0.9617874E-05   0.8743842E+05   0.1329799E-01   0.3477279E+01
+  57    0.8381269E+02   0.2956273E+01   0.9678674E-05   0.8751958E+05   0.1322133E-01   0.3537895E+01
+  58    0.8518297E+02   0.2999928E+01   0.9733176E-05   0.8763238E+05   0.1315139E-01   0.3595737E+01
+  59    0.8640494E+02   0.3038249E+01   0.9777048E-05   0.8780747E+05   0.1309729E-01   0.3647319E+01
+  60    0.8739361E+02   0.3068183E+01   0.9805730E-05   0.8808580E+05   0.1306975E-01   0.3689052E+01
+  61    0.8806195E+02   0.3086559E+01   0.9814352E-05   0.8851778E+05   0.1308082E-01   0.3717264E+01
+  62    0.8832038E+02   0.3090105E+01   0.9797636E-05   0.8916152E+05   0.1314369E-01   0.3728173E+01
+  63    0.8807805E+02   0.3075543E+01   0.9749916E-05   0.9007943E+05   0.1327213E-01   0.3717944E+01
+  64    0.8724832E+02   0.3039833E+01   0.9665396E-05   0.9133292E+05   0.1347945E-01   0.3682919E+01
+  65    0.8575930E+02   0.2980586E+01   0.9538691E-05   0.9297533E+05   0.1377697E-01   0.3620065E+01
+
+[Liquid Properties]
+
+ Stage  Moleweight      Density         Viscosity       Heat capacity   Th. Conduct.    Surf. tension   Std Density
+
+   1    0.5808757E+02   0.7442967E+03   0.2354572E-03   0.1327883E+06   0.1447380E+00   0.1921563E-01   0.7892521E+03
+   2    0.5809026E+02   0.7443119E+03   0.2354789E-03   0.1327900E+06   0.1447358E+00   0.1921618E-01   0.7892671E+03
+   3    0.5809357E+02   0.7443307E+03   0.2355055E-03   0.1327921E+06   0.1447331E+00   0.1921685E-01   0.7892855E+03
+   4    0.5809766E+02   0.7443538E+03   0.2355383E-03   0.1327948E+06   0.1447297E+00   0.1921768E-01   0.7893082E+03
+   5    0.5810269E+02   0.7443823E+03   0.2355788E-03   0.1327980E+06   0.1447256E+00   0.1921870E-01   0.7893362E+03
+   6    0.5810891E+02   0.7444175E+03   0.2356288E-03   0.1328020E+06   0.1447205E+00   0.1921997E-01   0.7893707E+03
+   7    0.5811659E+02   0.7444609E+03   0.2356905E-03   0.1328070E+06   0.1447142E+00   0.1922152E-01   0.7894134E+03
+   8    0.5812608E+02   0.7445146E+03   0.2357667E-03   0.1328131E+06   0.1447063E+00   0.1922345E-01   0.7894661E+03
+   9    0.5813782E+02   0.7445810E+03   0.2358611E-03   0.1328207E+06   0.1446967E+00   0.1922584E-01   0.7895314E+03
+  10    0.5815238E+02   0.7446633E+03   0.2359779E-03   0.1328301E+06   0.1446847E+00   0.1922879E-01   0.7896123E+03
+  11    0.5817045E+02   0.7447654E+03   0.2361229E-03   0.1328417E+06   0.1446698E+00   0.1923245E-01   0.7897128E+03
+  12    0.5819293E+02   0.7448926E+03   0.2363032E-03   0.1328562E+06   0.1446512E+00   0.1923700E-01   0.7898379E+03
+  13    0.5822100E+02   0.7450515E+03   0.2365279E-03   0.1328743E+06   0.1446281E+00   0.1924266E-01   0.7899944E+03
+  14    0.5825618E+02   0.7452510E+03   0.2368089E-03   0.1328968E+06   0.1445991E+00   0.1924974E-01   0.7901911E+03
+  15    0.5830053E+02   0.7455035E+03   0.2371620E-03   0.1329251E+06   0.1445625E+00   0.1925861E-01   0.7904404E+03
+  16    0.5835687E+02   0.7458262E+03   0.2376082E-03   0.1329606E+06   0.1445161E+00   0.1926978E-01   0.7907598E+03
+  17    0.5842921E+02   0.7462452E+03   0.2381765E-03   0.1330056E+06   0.1444565E+00   0.1928393E-01   0.7911760E+03
+  18    0.5852350E+02   0.7468011E+03   0.2389080E-03   0.1330627E+06   0.1443790E+00   0.1930200E-01   0.7917307E+03
+  19    0.5864892E+02   0.7475609E+03   0.2398629E-03   0.1331355E+06   0.1442763E+00   0.1932527E-01   0.7924936E+03
+  20    0.5882039E+02   0.7486400E+03   0.2411325E-03   0.1332291E+06   0.1441366E+00   0.1935562E-01   0.7935862E+03
+  21    0.5906299E+02   0.7502445E+03   0.2428610E-03   0.1333497E+06   0.1439404E+00   0.1939581E-01   0.7952266E+03
+  22    0.5942023E+02   0.7527476E+03   0.2452804E-03   0.1335060E+06   0.1436545E+00   0.1944997E-01   0.7978125E+03
+  23    0.5996791E+02   0.7568178E+03   0.2487667E-03   0.1337092E+06   0.1432211E+00   0.1952442E-01   0.8020610E+03
+  24    0.6083435E+02   0.7635912E+03   0.2539072E-03   0.1339744E+06   0.1425431E+00   0.1962871E-01   0.8091986E+03
+  25    0.6221751E+02   0.7747600E+03   0.2615170E-03   0.1343251E+06   0.1414697E+00   0.1977631E-01   0.8210720E+03
+  26    0.6436159E+02   0.7921371E+03   0.2724222E-03   0.1348049E+06   0.1398092E+00   0.1998344E-01   0.8397140E+03
+  27    0.6741998E+02   0.8159712E+03   0.2867583E-03   0.1355068E+06   0.1374190E+00   0.2026212E-01   0.8655931E+03
+  28    0.7118649E+02   0.8422927E+03   0.3029536E-03   0.1365980E+06   0.1343867E+00   0.2060353E-01   0.8948060E+03
+  29    0.7492157E+02   0.8626591E+03   0.3174486E-03   0.1382464E+06   0.1311588E+00   0.2095331E-01   0.9186929E+03
+  30    0.7767136E+02   0.8699362E+03   0.3264156E-03   0.1403772E+06   0.1283874E+00   0.2121420E-01   0.9296052E+03
+  31    0.7767286E+02   0.8699476E+03   0.3264181E-03   0.1403774E+06   0.1283863E+00   0.2121423E-01   0.9296185E+03
+  32    0.7767490E+02   0.8699631E+03   0.3264215E-03   0.1403776E+06   0.1283846E+00   0.2121427E-01   0.9296367E+03
+  33    0.7767770E+02   0.8699844E+03   0.3264262E-03   0.1403778E+06   0.1283824E+00   0.2121433E-01   0.9296615E+03
+  34    0.7768153E+02   0.8700134E+03   0.3264326E-03   0.1403782E+06   0.1283794E+00   0.2121441E-01   0.9296955E+03
+  35    0.7768677E+02   0.8700532E+03   0.3264414E-03   0.1403788E+06   0.1283752E+00   0.2121451E-01   0.9297421E+03
+  36    0.7769393E+02   0.8701077E+03   0.3264534E-03   0.1403795E+06   0.1283696E+00   0.2121466E-01   0.9298057E+03
+  37    0.7770373E+02   0.8701821E+03   0.3264697E-03   0.1403805E+06   0.1283618E+00   0.2121485E-01   0.9298928E+03
+  38    0.7771711E+02   0.8702839E+03   0.3264921E-03   0.1403818E+06   0.1283512E+00   0.2121512E-01   0.9300118E+03
+  39    0.7773538E+02   0.8704230E+03   0.3265225E-03   0.1403836E+06   0.1283367E+00   0.2121548E-01   0.9301744E+03
+  40    0.7776029E+02   0.8706128E+03   0.3265639E-03   0.1403860E+06   0.1283170E+00   0.2121597E-01   0.9303963E+03
+  41    0.7779421E+02   0.8708715E+03   0.3266200E-03   0.1403892E+06   0.1282902E+00   0.2121663E-01   0.9306987E+03
+  42    0.7784029E+02   0.8712234E+03   0.3266959E-03   0.1403935E+06   0.1282538E+00   0.2121752E-01   0.9311101E+03
+  43    0.7790270E+02   0.8717012E+03   0.3267981E-03   0.1403992E+06   0.1282045E+00   0.2121871E-01   0.9316683E+03
+  44    0.7798693E+02   0.8723473E+03   0.3269349E-03   0.1404066E+06   0.1281382E+00   0.2122027E-01   0.9324232E+03
+  45    0.7809997E+02   0.8732171E+03   0.3271165E-03   0.1404160E+06   0.1280493E+00   0.2122231E-01   0.9334391E+03
+  46    0.7825061E+02   0.8743804E+03   0.3273552E-03   0.1404278E+06   0.1279311E+00   0.2122493E-01   0.9347972E+03
+  47    0.7844948E+02   0.8759223E+03   0.3276647E-03   0.1404422E+06   0.1277755E+00   0.2122823E-01   0.9365969E+03
+  48    0.7870875E+02   0.8779420E+03   0.3280592E-03   0.1404591E+06   0.1275733E+00   0.2123228E-01   0.9389536E+03
+  49    0.7904143E+02   0.8805466E+03   0.3285513E-03   0.1404780E+06   0.1273150E+00   0.2123710E-01   0.9419921E+03
+  50    0.7945974E+02   0.8838389E+03   0.3291494E-03   0.1404978E+06   0.1269917E+00   0.2124265E-01   0.9458321E+03
+  51    0.7997275E+02   0.8878970E+03   0.3298541E-03   0.1405169E+06   0.1265974E+00   0.2124875E-01   0.9505652E+03
+  52    0.8058335E+02   0.8927474E+03   0.3306552E-03   0.1405335E+06   0.1261308E+00   0.2125520E-01   0.9562238E+03
+  53    0.8128522E+02   0.8983371E+03   0.3315309E-03   0.1405460E+06   0.1255976E+00   0.2126171E-01   0.9627486E+03
+  54    0.8206084E+02   0.9045110E+03   0.3324484E-03   0.1405545E+06   0.1250114E+00   0.2126808E-01   0.9699643E+03
+  55    0.8288138E+02   0.9110043E+03   0.3333666E-03   0.1405621E+06   0.1243930E+00   0.2127418E-01   0.9775715E+03
+  56    0.8370867E+02   0.9174511E+03   0.3342391E-03   0.1405760E+06   0.1237683E+00   0.2127996E-01   0.9851591E+03
+  57    0.8449835E+02   0.9234039E+03   0.3350143E-03   0.1406090E+06   0.1231651E+00   0.2128536E-01   0.9922298E+03
+  58    0.8520286E+02   0.9283533E+03   0.3356343E-03   0.1406799E+06   0.1226104E+00   0.2129014E-01   0.9982260E+03
+  59    0.8577319E+02   0.9317399E+03   0.3360308E-03   0.1408138E+06   0.1221286E+00   0.2129375E-01   0.1002546E+04
+  60    0.8615910E+02   0.9329601E+03   0.3361217E-03   0.1410416E+06   0.1217419E+00   0.2129522E-01   0.1004549E+04
+  61    0.8630884E+02   0.9313735E+03   0.3358097E-03   0.1413989E+06   0.1214709E+00   0.2129320E-01   0.1003564E+04
+  62    0.8616989E+02   0.9263296E+03   0.3349860E-03   0.1419243E+06   0.1213348E+00   0.2128609E-01   0.9989090E+03
+  63    0.8569203E+02   0.9172231E+03   0.3335397E-03   0.1426555E+06   0.1213515E+00   0.2127238E-01   0.9899493E+03
+  64    0.8483325E+02   0.9035792E+03   0.3313735E-03   0.1436253E+06   0.1215358E+00   0.2125109E-01   0.9761772E+03
+  65    0.8356726E+02   0.8851469E+03   0.3284207E-03   0.1448564E+06   0.1218959E+00   0.2122225E-01   0.9573109E+03
+
+[Vapour phase compositions]
+
+ Component     Mole fractions on stages:        1 to  5
+
+           1  9.997209715E-01  9.996220099E-01  9.995000764E-01  9.993497950E-01  9.991645084E-01
+           2  1.582664704E-10  3.698075819E-10  8.191274565E-10  1.773433542E-09  3.800112644E-09
+           3  2.790283383E-04  3.779897669E-04  4.999227607E-04  6.502032443E-04  8.354878027E-04
+
+ Component     Mole fractions on stages:        6 to 10
+
+           1  9.989359615E-01  9.986538991E-01  9.983055539E-01  9.978749871E-01  9.973422338E-01
+           2  8.103790624E-09  1.724160248E-08  3.664063114E-08  7.781601139E-08  1.651927212E-07
+           3  1.064030432E-03  1.346083647E-03  1.694409471E-03  2.124935058E-03  2.657600977E-03
+
+ Component     Mole fractions on stages:       11 to 15
+
+           1  9.966821798E-01  9.958630665E-01  9.948444645E-01  9.935744721E-01  9.919857440E-01
+           2  3.505585624E-07  7.436636288E-07  1.576947258E-06  3.342298648E-06  7.079587028E-06
+           3  3.317469595E-03  4.136189867E-03  5.153958589E-03  6.422185598E-03  8.007176417E-03
+
+ Component     Mole fractions on stages:       16 to 20
+
+           1  9.899897004E-01  9.874678083E-01  9.842579911E-01  9.801326897E-01  9.747622623E-01
+           2  1.498418701E-05  3.168274791E-05  6.690216593E-05  1.410225548E-04  2.965334021E-04
+           3  9.995315406E-03  1.250050899E-02  1.567510672E-02  1.972628775E-02  2.494120434E-02
+
+ Component     Mole fractions on stages:       21 to 25
+
+           1  9.676522787E-01  9.580344336E-01  9.446776475E-01  9.255742624E-01  8.974781160E-01
+           2  6.213467599E-04  1.295130998E-03  2.677462212E-03  5.461424061E-03  1.089155008E-02
+           3  3.172637455E-02  4.067043538E-02  5.264489030E-02  6.896431349E-02  9.163033396E-02
+
+ Component     Mole fractions on stages:       26 to 30
+
+           1  8.554302643E-01  7.928911619E-01  7.038220079E-01  5.878399390E-01  4.568374099E-01
+           2  2.090621748E-02  3.767587569E-02  6.158884789E-02  8.786279598E-02  1.060149310E-01
+           3  1.236635182E-01  1.694329624E-01  2.345891442E-01  3.242972650E-01  4.371476591E-01
+
+ Component     Mole fractions on stages:       31 to 35
+
+           1  4.567893529E-01  4.567235717E-01  4.566335412E-01  4.565103436E-01  4.563418008E-01
+           2  1.060373620E-01  1.060680729E-01  1.061101179E-01  1.061676760E-01  1.062464637E-01
+           3  4.371732851E-01  4.372083554E-01  4.372563410E-01  4.373219804E-01  4.374117355E-01
+
+ Component     Mole fractions on stages:       36 to 40
+
+           1  4.561112975E-01  4.557961953E-01  4.553657045E-01  4.547780514E-01  4.539767483E-01
+           2  1.063542971E-01  1.065018565E-01  1.067037244E-01  1.069797865E-01  1.073571143E-01
+           3  4.375344055E-01  4.377019482E-01  4.379305711E-01  4.382421622E-01  4.386661374E-01
+
+ Component     Mole fractions on stages:       41 to 45
+
+           1  4.528857561E-01  4.514033447E-01  4.493945476E-01  4.466823305E-01  4.430380604E-01
+           2  1.078724717E-01  1.085756100E-01  1.095335185E-01  1.108357486E-01  1.126007808E-01
+           3  4.392417722E-01  4.400210453E-01  4.410719340E-01  4.424819209E-01  4.443611589E-01
+
+ Component     Mole fractions on stages:       46 to 50
+
+           1  4.381726840E-01  4.317313393E-01  4.232959063E-01  4.124019087E-01  3.985771192E-01
+           2  1.149830574E-01  1.181796393E-01  1.224343121E-01  1.280353229E-01  1.353010591E-01
+           3  4.468442586E-01  4.500890214E-01  4.542697816E-01  4.595627683E-01  4.661218217E-01
+
+ Component     Mole fractions on stages:       51 to 55
+
+           1  3.814072101E-01  3.606263916E-01  3.362174054E-01  3.084897443E-01  2.780983131E-01
+           2  1.445468819E-01  1.560279193E-01  1.698590772E-01  1.859249758E-01  2.038040484E-01
+           3  4.740459080E-01  4.833456890E-01  4.939235173E-01  5.055852800E-01  5.180976385E-01
+
+ Component     Mole fractions on stages:       56 to 60
+
+           1  2.459785402E-01  2.132080391E-01  1.808407267E-01  1.497722056E-01  1.206769300E-01
+           2  2.227330041E-01  2.416233719E-01  2.591166725E-01  2.736466155E-01  2.834804778E-01
+           3  5.312884557E-01  5.451685890E-01  5.600426008E-01  5.765811789E-01  5.958425921E-01
+
+ Component     Mole fractions on stages:       61 to 65
+
+           1  9.402247268E-02  7.013494187E-02  4.927287741E-02  3.166558269E-02  1.748714289E-02
+           2  2.867361648E-01  2.814013797E-01  2.653997014E-01  2.367426948E-01  1.937725128E-01
+           3  6.192413625E-01  6.484636784E-01  6.853274211E-01  7.315917225E-01  7.887403443E-01
+
+[Liquid phase compositions]
+
+ Component     Mole fractions on stages:        1 to  5
+
+           1  9.996220099E-01  9.994878830E-01  9.993225733E-01  9.991187576E-01  9.988673552E-01
+           2  3.698075819E-10  8.640596132E-10  1.913797319E-09  4.143148007E-09  8.877205362E-09
+           3  3.779897669E-04  5.121161060E-04  6.774248211E-04  8.812382540E-04  1.132635956E-03
+
+ Component     Mole fractions on stages:        6 to 10
+
+           1  9.985570851E-01  9.981739029E-01  9.977002754E-01  9.971142400E-01  9.963881698E-01
+           2  1.892883262E-08  4.026786179E-08  8.556105276E-08  1.816761845E-07  3.855806581E-07
+           3  1.442895942E-03  1.826056824E-03  2.299639083E-03  2.885578306E-03  3.611444608E-03
+
+ Component     Mole fractions on stages:       11 to 15
+
+           1  9.954871278E-01  9.943666379E-01  9.929696022E-01  9.912219308E-01  9.890261692E-01
+           2  8.180017835E-07  1.734628767E-06  3.676555694E-06  7.787681788E-06  1.648303580E-05
+           3  4.512054233E-03  5.631627459E-03  7.026721226E-03  8.770281563E-03  1.095734776E-02
+
+ Component     Mole fractions on stages:       16 to 20
+
+           1  9.862519029E-01  9.827207981E-01  9.781824485E-01  9.722740733E-01  9.644514441E-01
+           2  3.485225045E-05  7.359579059E-05  1.551342463E-04  3.262131163E-04  6.835564483E-04
+           3  1.371324484E-02  1.720560613E-02  2.166241724E-02  2.739971354E-02  3.486499944E-02
+
+ Component     Mole fractions on stages:       21 to 25
+
+           1  9.538686597E-01  9.391697911E-01  9.181422738E-01  8.872052909E-01  8.408802931E-01
+           2  1.424862564E-03  2.945862364E-03  6.009573601E-03  1.198693601E-02  2.301580326E-02
+           3  4.470647774E-02  5.788434652E-02  7.584815257E-02  1.008077731E-01  1.361039036E-01
+
+ Component     Mole fractions on stages:       26 to 30
+
+           1  7.719231355E-01  6.736038510E-01  5.454036443E-01  4.004056399E-01  2.661537627E-01
+           2  4.149721516E-02  6.788060396E-02  9.691751632E-02  1.170370016E-01  1.184957119E-01
+           3  1.865796493E-01  2.585155450E-01  3.576788394E-01  4.825573585E-01  6.153505254E-01
+
+ Component     Mole fractions on stages:       31 to 35
+
+           1  2.661156888E-01  2.660635797E-01  2.659922741E-01  2.658947239E-01  2.657613132E-01
+           2  1.185134235E-01  1.185376715E-01  1.185708663E-01  1.186163043E-01  1.186784930E-01
+           3  6.153708877E-01  6.153987488E-01  6.154368596E-01  6.154889719E-01  6.155601938E-01
+
+ Component     Mole fractions on stages:       36 to 40
+
+           1  2.655789410E-01  2.653297902E-01  2.649896891E-01  2.645259563E-01  2.638946046E-01
+           2  1.187635916E-01  1.188800091E-01  1.190392126E-01  1.192568117E-01  1.195540034E-01
+           3  6.156574674E-01  6.157902007E-01  6.159710983E-01  6.162172320E-01  6.165513919E-01
+
+ Component     Mole fractions on stages:       41 to 45
+
+           1  2.630367976E-01  2.618744976E-01  2.603053816E-01  2.581973702E-01  2.553835937E-01
+           2  1.199594705E-01  1.205118288E-01  1.212626927E-01  1.222803364E-01  1.236537353E-01
+           3  6.170037319E-01  6.176136736E-01  6.184319257E-01  6.195222934E-01  6.209626710E-01
+
+ Component     Mole fractions on stages:       46 to 50
+
+           1  2.516593801E-01  2.467838735E-01  2.404899731E-01  2.325067837E-01  2.225975453E-01
+           2  1.254963833E-01  1.279486357E-01  1.311763830E-01  1.353627970E-01  1.406892742E-01
+           3  6.228442366E-01  6.252674907E-01  6.283336440E-01  6.321304193E-01  6.367131805E-01
+
+ Component     Mole fractions on stages:       51 to 55
+
+           1  2.106116882E-01  1.965418700E-01  1.805681217E-01  1.630677156E-01  1.445774930E-01
+           2  1.473026182E-01  1.552691941E-01  1.645232907E-01  1.748234660E-01  1.857317855E-01
+           3  6.420856936E-01  6.481889359E-01  6.549085876E-01  6.621088184E-01  6.696907216E-01
+
+ Component     Mole fractions on stages:       56 to 60
+
+           1  1.257147781E-01  1.070830453E-01  8.919553121E-02  7.243957711E-02  5.708468324E-02
+           2  1.966227167E-01  2.067142275E-01  2.151032731E-01  2.207897946E-01  2.226870066E-01
+           3  6.776625053E-01  6.862027272E-01  6.957011957E-01  7.067706283E-01  7.202283102E-01
+
+ Component     Mole fractions on stages:       61 to 65
+
+           1  4.331959868E-02  3.129421116E-02  2.114113018E-02  1.296059230E-02  6.772335777E-03
+           2  2.196327017E-01  2.104267229E-01  1.939164324E-01  1.691323424E-01  1.354467155E-01
+           3  7.370476996E-01  7.582790659E-01  7.849424374E-01  8.179070653E-01  8.577809487E-01
+
+[Reaction rates]
+
+ Component reaction rates on stages:            1 to  5
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:            6 to 10
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           11 to 15
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           16 to 20
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           21 to 25
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           26 to 30
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           31 to 35
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           36 to 40
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           41 to 45
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           46 to 50
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           51 to 55
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           56 to 60
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+ Component reaction rates on stages:           61 to 65
+
+           1 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           2 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+           3 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00 -0.000000000E+00
+
+[Slopes]
+
+ Component     Equilibrium slopes on stages:    1 to  5
+
+           1  7.379212736E-01  7.377296270E-01  7.374935546E-01  7.372026695E-01  7.368441068E-01
+           2  4.279697827E-01  4.279885053E-01  4.280116033E-01  4.280401162E-01  4.280753396E-01
+
+ Component     Equilibrium slopes on stages:    6 to 10
+
+           1  7.364019008E-01  7.358561883E-01  7.351821776E-01  7.343487998E-01  7.333169230E-01
+           2  4.281188937E-01  4.281728123E-01  4.282396623E-01  4.283227053E-01  4.284261238E-01
+
+ Component     Equilibrium slopes on stages:   11 to 15
+
+           1  7.320369566E-01  7.304456026E-01  7.284614137E-01  7.259787134E-01  7.228593580E-01
+           2  4.285553462E-01  4.287175332E-01  4.289223371E-01  4.291831429E-01  4.295191891E-01
+
+ Component     Equilibrium slopes on stages:   16 to 20
+
+           1  7.189219097E-01  7.139283785E-01  7.075705605E-01  6.994628543E-01  6.891595982E-01
+           2  4.299593498E-01  4.305491188E-01  4.313638772E-01  4.325345963E-01  4.342981944E-01
+
+ Component     Equilibrium slopes on stages:   21 to 25
+
+           1  6.762379460E-01  6.605279416E-01  6.426252449E-01  6.248432647E-01  6.126210011E-01
+           2  4.370963151E-01  4.417666946E-01  4.499009454E-01  4.644604968E-01  4.906438530E-01
+
+ Component     Equilibrium slopes on stages:   26 to 30
+
+           1  6.159536519E-01  6.499872890E-01  7.349463330E-01  8.965970668E-01  1.155902423E+00
+           2  5.364719763E-01  6.112203316E-01  7.189899723E-01  8.500563881E-01  9.828717698E-01
+
+ Component     Equilibrium slopes on stages:   31 to 35
+
+           1  1.156010141E+00  1.156157590E+00  1.156359401E+00  1.156635570E+00  1.157013411E+00
+           2  9.829348011E-01  9.830210764E-01  9.831391506E-01  9.833007127E-01  9.835217211E-01
+
+ Component     Equilibrium slopes on stages:   36 to 40
+
+           1  1.157530197E+00  1.158236730E+00  1.159202138E+00  1.160520264E+00  1.162318118E+00
+           2  9.838239390E-01  9.842370014E-01  9.848011791E-01  9.855710400E-01  9.866202372E-01
+
+ Component     Equilibrium slopes on stages:   41 to 45
+
+           1  1.164766859E+00  1.168095829E+00  1.172609905E+00  1.178710039E+00  1.186915756E+00
+           2  9.880476474E-01  9.899850237E-01  9.926061152E-01  9.961367612E-01  1.000864584E+00
+
+ Component     Equilibrium slopes on stages:   46 to 50
+
+           1  1.197886545E+00  1.212435884E+00  1.231527149E+00  1.256235463E+00  1.287656326E+00
+           2  1.007145384E+00  1.015400994E+00  1.026100320E+00  1.039712552E+00  1.056621645E+00
+
+ Component     Equilibrium slopes on stages:   51 to 55
+
+           1  1.326746260E+00  1.374100652E+00  1.429713909E+00  1.492816454E+00  1.561908010E+00
+           2  1.076998821E+00  1.100649718E+00  1.126884261E+00  1.154485252E+00  1.181846741E+00
+
+ Component     Equilibrium slopes on stages:   56 to 60
+
+           1  1.635065727E+00  1.710494244E+00  1.787164013E+00  1.865338483E+00  1.946843479E+00
+           2  1.207293646E+00  1.229500824E+00  1.247868421E+00  1.262732306E+00  1.275371523E+00
+
+ Component     Equilibrium slopes on stages:   61 to 65
+
+           1  2.035023318E+00  2.134386765E+00  2.249967229E+00  2.386466053E+00  2.547360349E+00
+           2  1.287843663E+00  1.302685132E+00  1.322480911E+00  1.349310678E+00  1.384168951E+00
+
+[Condenser Heat Duty]
+ -1.0323524382517E+06 Duty
+  3.2940343150031E+02 Temperature
+
+[Reboiler Heat Duty]
+  1.0415276273525E+06 Duty
+  3.5064730327998E+02 Temperature
+
+[UA Column]
+  *                   UA
+
+[K-values]
+
+ Component     K-values on stages:              1 to  5
+
+           1  1.000098999E+00  1.000134196E+00  1.000177623E+00  1.000231241E+00  1.000297490E+00
+           2  4.279697824E-01  4.279885047E-01  4.280116020E-01  4.280401132E-01  4.280753333E-01
+           3  7.381901913E-01  7.380938862E-01  7.379752632E-01  7.378291187E-01  7.376490195E-01
+
+ Component     K-values on stages:              6 to 10
+
+           1  1.000379424E+00  1.000480874E+00  1.000606674E+00  1.000762949E+00  1.000957522E+00
+           2  4.281188803E-01  4.281727837E-01  4.282396015E-01  4.283225763E-01  4.284258501E-01
+           3  7.374270045E-01  7.371532090E-01  7.368153916E-01  7.363983342E-01  7.358830786E-01
+
+ Component     K-values on stages:             11 to 15
+
+           1  1.001200470E+00  1.001504906E+00  1.001888137E+00  1.002373375E+00  1.002992413E+00
+           2  4.285547653E-01  4.287163011E-01  4.289197252E-01  4.291776088E-01  4.295074715E-01
+           3  7.352459486E-01  7.344572946E-01  7.334798725E-01  7.322667525E-01  7.307586284E-01
+
+ Component     K-values on stages:             16 to 20
+
+           1  1.003789901E+00  1.004830477E+00  1.006211053E+00  1.008082717E+00  1.010690863E+00
+           2  4.299345613E-01  4.304967398E-01  4.312533662E-01  4.323019148E-01  4.338096771E-01
+           3  7.288804017E-01  7.265369729E-01  7.236083835E-01  7.199450360E-01  7.153651150E-01
+
+ Component     K-values on stages:             21 to 25
+
+           1  1.014450227E+00  1.020086509E+00  1.028901157E+00  1.043247005E+00  1.067307825E+00
+           2  4.360748718E-01  4.396440966E-01  4.455328098E-01  4.556146839E-01  4.732205068E-01
+           3  7.096594532E-01  7.026154363E-01  6.940826972E-01  6.841170219E-01  6.732381039E-01
+
+ Component     K-values on stages:             26 to 30
+
+           1  1.108180628E+00  1.177088226E+00  1.290460772E+00  1.468111037E+00  1.716441674E+00
+           2  5.037980840E-01  5.550315335E-01  6.354769524E-01  7.507266486E-01  8.946731430E-01
+           3  6.627921036E-01  6.554072500E-01  6.558653139E-01  6.720387935E-01  7.104042997E-01
+
+ Component     K-values on stages:             31 to 35
+
+           1  1.716506663E+00  1.716595606E+00  1.716717310E+00  1.716883799E+00  1.717111476E+00
+           2  8.947287062E-01  8.948047613E-01  8.949088524E-01  8.950512887E-01  8.952461483E-01
+           3  7.104224360E-01  7.104472609E-01  7.104812364E-01  7.105277273E-01  7.105913278E-01
+
+ Component     K-values on stages:             36 to 40
+
+           1  1.717422683E+00  1.717847796E+00  1.718428011E+00  1.719219005E+00  1.720295680E+00
+           2  8.955126371E-01  8.958769207E-01  8.963745817E-01  8.970538867E-01  8.979800858E-01
+           3  7.106783051E-01  7.107971963E-01  7.109596089E-01  7.111812838E-01  7.114834922E-01
+
+ Component     K-values on stages:             41 to 45
+
+           1  1.721758173E+00  1.723739230E+00  1.726412819E+00  1.730003409E+00  1.734794526E+00
+           2  8.992409793E-01  9.009539653E-01  9.032746680E-01  9.064069648E-01  9.106136626E-01
+           3  7.118948388E-01  7.124535354E-01  7.132101620E-01  7.142308285E-01  7.156004372E-01
+
+ Component     K-values on stages:             46 to 50
+
+           1  1.741133924E+00  1.749430921E+00  1.760139522E+00  1.773719898E+00  1.790572841E+00
+           2  9.162260647E-01  9.236490771E-01  9.333563659E-01  9.458678879E-01  9.617013086E-01
+           3  7.174253727E-01  7.198343558E-01  7.229754223E-01  7.270062542E-01  7.320750315E-01
+
+ Component     K-values on stages:             51 to 55
+
+           1  1.810949873E+00  1.834857843E+00  1.861997579E+00  1.891789206E+00  1.923524246E+00
+           2  9.812920071E-01  1.004886515E+00  1.032431800E+00  1.063501256E+00  1.097303016E+00
+           3  7.382907184E-01  7.456864229E-01  7.541869608E-01  7.635984689E-01  7.736371757E-01
+
+ Component     K-values on stages:             56 to 60
+
+           1  1.956639816E+00  1.991053191E+00  2.027463980E+00  2.067546658E+00  2.113998417E+00
+           2  1.132793850E+00  1.168876351E+00  1.204615201E+00  1.239398841E+00  1.272999634E+00
+           3  7.840015517E-01  7.944716151E-01  8.050045109E-01  8.157967462E-01  8.272968220E-01
+
+ Component     K-values on stages:             61 to 65
+
+           1  2.170437297E+00  2.241147461E+00  2.330664302E+00  2.443220338E+00  2.582143513E+00
+           2  1.305525828E+00  1.337289180E+00  1.368629250E+00  1.399748217E+00  1.430618026E+00
+           3  8.401645686E-01  8.551781363E-01  8.730925842E-01  8.944680314E-01  9.195125463E-01
+
+[Molecular weights]
+
+     1        58.080
+     2       119.377
+     3        78.114
+
+[Feed stream 1]                              
+
+           30 Stage Number
+  2.7777760000000E-02 Flow rate
+  3.4576351840795E+02 Temperature [K]
+  1.0132500000000E+05 Pressure [Pa]
+ -2.6656467981566E+07 Enthalpy [J/kmol]
+ -6.3732302310602E+04 Entropy [J/kmol/K]
+  0.0000000000000E+00 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  1.1999995679997E-01 Mole fraction of component    1
+  1.1999995679997E-01 Mole fraction of component    2
+  7.6000008640006E-01 Mole fraction of component    3
+  2.7777760000000E-02 Flow rate
+  1.1999995679997E-01 Mole fraction of component    1
+  1.1999995679997E-01 Mole fraction of component    2
+  7.6000008640006E-01 Mole fraction of component    3
+  8.0661477964742E+01 Molar mass
+  8.7542037451873E+02 Density
+  3.3022955116396E-04 Viscosity
+  1.2505314462808E-01 Thermal conductivity
+  1.4297973153005E+05 Heat capacity
+  2.1325213489567E-02 Surface tension
+
+[Reflashed Feed stream 1]                    
+
+           30 Stage Number
+  2.7777760000000E-02 Flow rate
+  3.4576351840795E+02 Temperature [K]
+  1.0132500000000E+05 Pressure [Pa]
+ -2.6656467981566E+07 Enthalpy [J/kmol]
+ -6.3732302310602E+04 Entropy [J/kmol/K]
+  0.0000000000000E+00 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  1.1999995679997E-01 Mole fraction of component    1
+  1.1999995679997E-01 Mole fraction of component    2
+  7.6000008640006E-01 Mole fraction of component    3
+  2.7777760000000E-02 Flow rate
+  1.1999995679997E-01 Mole fraction of component    1
+  1.1999995679997E-01 Mole fraction of component    2
+  7.6000008640006E-01 Mole fraction of component    3
+  8.0661477964742E+01 Molar mass
+  8.7542037451873E+02 Density
+  3.3022955116396E-04 Viscosity
+  1.2505314462808E-01 Thermal conductivity
+  1.4297973153005E+05 Heat capacity
+  2.1325213489567E-02 Surface tension
+
+[Top product]                                
+
+            1 Stage Number
+  3.1678609201822E-03 Flow rate
+  3.2940343150031E+02 Temperature [K]
+  1.0132500000000E+05 Pressure [Pa]
+ -2.7208897975204E+07 Enthalpy [J/kmol]
+ -7.2306995352728E+04 Entropy [J/kmol/K]
+  0.0000000000000E+00 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  9.9962200986332E-01 Mole fraction of component    1
+  3.6980758185707E-10 Mole fraction of component    2
+  3.7798976687117E-04 Mole fraction of component    3
+  3.1678609201822E-03 Flow rate
+  9.9962200986332E-01 Mole fraction of component    1
+  3.6980758185707E-10 Mole fraction of component    2
+  3.7798976687117E-04 Mole fraction of component    3
+  5.8087574499420E+01 Molar mass
+  7.4429673850302E+02 Density
+  2.3545724736760E-04 Viscosity
+  1.4473804308725E-01 Thermal conductivity
+  1.3278827399964E+05 Heat capacity
+  1.9215628715187E-02 Surface tension
+
+[Bottom product]                             
+
+           65 Stage Number
+  2.4609899079818E-02 Flow rate
+  3.5064730327998E+02 Temperature [K]
+  1.0132500000000E+05 Pressure [Pa]
+ -2.6212532375069E+07 Enthalpy [J/kmol]
+ -6.4447739053899E+04 Entropy [J/kmol/K]
+  0.0000000000000E+00 Vapour fraction [-]
+  1.0000000000000E+00 Liquid phase split ratio [-]
+  6.7723357767314E-03 Mole fraction of component    1
+  1.3544671548703E-01 Mole fraction of component    2
+  8.5778094873624E-01 Mole fraction of component    3
+  2.4609899079818E-02 Flow rate
+  6.7723357767314E-03 Mole fraction of component    1
+  1.3544671548703E-01 Mole fraction of component    2
+  8.5778094873624E-01 Mole fraction of component    3
+  8.3567259348560E+01 Molar mass
+  8.8514688907193E+02 Density
+  3.2842071856648E-04 Viscosity
+  1.2189593589620E-01 Thermal conductivity
+  1.4485640638668E+05 Heat capacity
+  2.1222250298235E-02 Surface tension
+
+
+[UNIFAC Data]
+3 Components Cid Group{id,number}
+1 1 1 19 1  # Acetone
+2 51 1  # Chloroform
+3 10 6  # Benzene
+4 Sub-Groups Gid R Q Main-id # Sub-id Sub-name Main-name:
+1 0.9011 0.848 1 # 1 CH3 CH2
+2 1.6724 1.488 9 # 19 CH3CO CH2CO
+3 2.87 2.41 23 # 51 CHCl3 CCl3
+4 0.5313 0.4 3 # 10 ACH ACH
+4 Main-Group-BIPs:
+A
+1 2 476.40 26.76 # 1-9 = CH2-CH2CO
+1 3 24.90 36.70 # 1-23 = CH2-CCl3
+1 4 61.13 -11.12 # 1-3 = CH2-ACH
+2 3 -354.60 552.10 # 9-23 = CH2CO-CCl3
+2 4 140.10 25.77 # 9-3 = CH2CO-ACH
+3 4 288.50 -231.90 # 23-3 = CCl3-ACH
+0 6
+
+[End of Results]
+
+[ChemSep Output]
+ChemSep (TM) - COL2 7.30
+Copyright (c) 1988-2017 Harry Kooijman and Ross Taylor
+License: 2100- 6 LITE free license
+Build: 803976883d4b                                      
+Checking data file Z:\Users\user\Desktop\chemSep\SEAD~Q2Q.SEP
+Reading configuration
+Reading component property libraries
+           1 67-64-1     
+           2 67-66-3     
+           3 71-43-2     
+Reading thermodynamic property options
+Reading physical property options
+Reading thermodynamic property data
+Reading reaction data
+Reading specifications
+Checking Component Data
+  67-64-1 Acetone                                           
+  67-66-3 Chloroform                                        
+  71-43-2 Benzene                                           
+Determining feed conditions
+Solving PV flash                                            
+Run level: Initialization                          
+Generating initial flow profiles
+Generating initial composition profiles
+ Init          603  milliseconds
+Run level: Simple model                            
+Solving CMO model                                           
+
+      Iteration    log(Err/Tol)
+         0           3.7631
+         1           6.7696
+         2           6.8331
+         3           6.7261
+         4           6.3573
+         5           6.1760
+         6           6.6372
+         7           7.0003
+         8           6.8338
+         9           6.8376
+        10           6.6849
+        11           6.2388
+        12           6.0855
+        13           6.7002
+        14           6.4061
+        15           6.2618
+        16           6.3118
+        17           6.2491
+        18           5.9332
+        19           5.7783
+        20           6.0612
+        21           5.3820
+        22           4.9400
+        23           4.5797
+        24           4.2301
+        25           3.8543
+        26           3.4276
+        27           2.2019
+        28           1.5926
+        29           0.8109
+        30          -7.0351
+Run level: Complete model                          
+
+      Iteration    log(Err/Tol)
+         0           2.2081
+         1           3.2898
+         2           0.3861
+         3          -3.0960
+Run level: Report                                  
+Convergence obtained in 33 iterations                        
+ Time           72  milliseconds
+ Cleanup called with  T
+ FixMem driver done
+[End ChemSep Output]
